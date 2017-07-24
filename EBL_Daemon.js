@@ -8,8 +8,11 @@ var colours = ["WHITE","RED","BLUE"];
 var flashInterval = 500;
 //total flashes since last refresh
 var flashCount = 0;
-//refresh every 5 minutes, 300 seconds
+//300 seconds = 5 minutes
 var LongInterval = 300000;
+//60 seconds = 1 minute
+var MediumInterval = 60000;
+//10 seconds
 var ShortInterval = 10000;
 var RefreshInterval = LongInterval;
 //total time since last refresh
@@ -35,16 +38,23 @@ window.setInterval(function(){
                     $('.dashboardViewPageBody').css('background-color', colours[flashStep]);
                     flashStep=2;
                 }
-                //play sound alternatively, can be shoved up there ^
-                if (flashStep % 2 == 1) {
-                    playtone();
-                }
             } else {
                 HighPriority = false;
                 $('.dashboardViewPageBody').css('background-color', colours[0]);
             }
             if (HighPriority === true) {
-                RefreshInterval = ShortInterval;
+                RefreshInterval = MediumInterval;
+                if (TimeSinceLastRefresh <= ShortInterval) {
+                    playsound = 1;
+                } else {
+                    playsound = 0;
+                }
+                if (playsound == 1) {
+                    //play sound alternatively, can be shoved up there ^
+                    if (flashStep % 2 == 1) {
+                        playtone();
+                    }
+                }
             } else {
                 RefreshInterval = LongInterval;
             }
