@@ -1,4 +1,4 @@
-0//JAAS - Jarrods Annoying Alert System - to be used in conjunction with the appropriate Salesforce report 
+//JAAS - Jarrods Annoying Alert System - to be used in conjunction with the appropriate Salesforce report 
 //Desc: this script should be injected into the correct Salesforce report which should check  if there is a P1/P2 case/request (can be anything else)
 //      if there is a result (image) it will make the background of the report alternate between red and blue
 //      it will also play an annoying sound on every other interval
