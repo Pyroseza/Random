@@ -3,10 +3,12 @@
 //      if there is a result (image) it will make the background of the report alternate between red and blue
 //      it will also play an annoying sound on every other interval
 
+var URLs_to_check = ["https://cdkglobal.my.salesforce.com/01Z0J00000122Ax", 
+"https://cdkglobal.my.salesforce.com/01Z0J000000mZXg"];
 //this is used to determine which colour to show
 var flashStep = 1;
 // the colours that the background can be, the first element should always be white
-var colours = ["WHITE","RED","BLUE", "LIME", "YELLOW", "ORANGE"];
+var colours = ["WHITE","RED","YELLOW", "LIME", "AQUA", "BLUE", "FUCHSIA"];
 //flash every half second
 var flashInterval = 500;
 //total flashes since last refresh
@@ -30,48 +32,42 @@ var high_pitch_played = false;
 
 window.setInterval(function(){
     //make sure this is the right dashboard
-    if (window.location.href == "https://cdkglobal.my.salesforce.com/01Z0J00000122Ax") {
-        //make double sure this is the right dashboard
-        if (document.title == "Dashboard: EBL - High Priorities Requests/Cases ~ Salesforce - Unlimited Edition") {
+    if (window.location.href == URLs_to_check[1]) {
+        
+        //do special check here
+        var el = document.querySelector("div.cContent map area");
+        if (el !== null) {
+            HighPriority = true;
+        } else {
+            HighPriority = false;
+        }
+        
+        //have we found a high priority
+        if (HighPriority === true) {
+            //set the refresh rate to the medium interval now
+            RefreshInterval = MediumInterval;
             
-            //do special check here
-            var el = document.querySelector("div.cContent map area");
-            if (el !== null) {
-                HighPriority = true;
+            //determine which colour to flash
+            if(flashStep < colours.length - 1) {
+                flashStep++;
             } else {
-                HighPriority = false;
+                flashStep = 1;
             }
             
-            //have we found a high priority
-            if (HighPriority === true) {
-                //set the refresh rate to the medium interval now
-                RefreshInterval = MediumInterval;
-                
-                //determine which colour to flash
-                if(flashStep < colours.length - 1) {
-                    flashStep++;
-                } else {
-                    flashStep = 1;
-                }
-                
-                //check if we can play the sound, only play straight after the refresh, before the next flashInterval
-                if (TimeSinceLastRefresh <= flashInterval) {
-                    //get today's date
-                    var date = new Date();
-                    //get the day of the week
-                    var dow = date.getDay();
-                    //only play if within the week
-                    //1 = Monday, 5 = Friday
-                    if (dow >= 1 && dow <= 5)
-                    {
-                        var hours = date.getHours();
-                        //additional check for working hours e.g. 7am to 6pm
-                        if (hours >= 7 && hours <= 18) {
-                            playsound = true;
-                        } else {
-                            //checks failed don't play the sound
-                            playsound = false;
-                        }
+            //check if we can play the sound, only play straight after the refresh, before the next flashInterval
+            if (TimeSinceLastRefresh <= flashInterval) {
+                //get today's date
+                var date = new Date();
+                //get the day of the week
+                var dow = date.getDay();
+                //only play if within the week
+                //1 = Monday, 5 = Friday
+                if (dow >= 1 && dow <= 5)
+                {
+                    var hours = date.getHours();
+                    //additional check for working hours e.g. 7am to 6pm
+                    if (hours >= 7 && hours <= 18) {
+                        playsound = true;
                     } else {
                         //checks failed don't play the sound
                         playsound = false;
@@ -80,38 +76,41 @@ window.setInterval(function(){
                     //checks failed don't play the sound
                     playsound = false;
                 }
-                
-                //make doubly sure that if the sound is to be played that it is not played over and over and over....
-                if (playsound === true && high_pitch_played === false) {
-                    //make it play a high pitch tone if it has not played yet
-                    playtone(true);
-                } else {
-                    //do nothing else, don't play anything further
-                }
             } else {
-                //set the refresh rate to the long interval now
-                RefreshInterval = LongInterval;
-                //set the screen back to being white
-                flashStep = 0;
+                //checks failed don't play the sound
+                playsound = false;
             }
             
-            //update the background
-            $('.dashboardViewPageBody').css('background-color', colours[flashStep]);
-            
-            //document should have flashed, increment the counter
-            flashCount++;
-            //multiply flash count by flash interval to get total time since last refresh
-            TimeSinceLastRefresh = flashCount * flashInterval;
-            
-            //if the time elapsed is more or equal to our limit then refresh
-            if (TimeSinceLastRefresh >= RefreshInterval) {
-                //reset the high pitch sound played
-                high_pitch_played = false;
-                //reset the flash count
-                flashCount = 0;
-                //refresh the dashboard
-                sfdc.dashboardView.doRefresh(false);
+            //make doubly sure that if the sound is to be played that it is not played over and over and over....
+            if (playsound === true && high_pitch_played === false) {
+                //make it play a high pitch tone if it has not played yet
+                playtone(true);
+            } else {
+                //do nothing else, don't play anything further
             }
+        } else {
+            //set the refresh rate to the long interval now
+            RefreshInterval = LongInterval;
+            //set the screen back to being white
+            flashStep = 0;
+        }
+        
+        //update the background
+        $('.dashboardViewPageBody').css('background-color', colours[flashStep]);
+        
+        //document should have flashed, increment the counter
+        flashCount++;
+        //multiply flash count by flash interval to get total time since last refresh
+        TimeSinceLastRefresh = flashCount * flashInterval;
+        
+        //if the time elapsed is more or equal to our limit then refresh
+        if (TimeSinceLastRefresh >= RefreshInterval) {
+            //reset the high pitch sound played
+            high_pitch_played = false;
+            //reset the flash count
+            flashCount = 0;
+            //refresh the dashboard
+            sfdc.dashboardView.doRefresh(false);
         }
     }
 }, flashInterval);
