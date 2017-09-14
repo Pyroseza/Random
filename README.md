@@ -1,2 +1,2 @@
-# Random
-Some random scripts written with a few different languages
+# Random stuff
+## Some random stuff written with a few different languages
