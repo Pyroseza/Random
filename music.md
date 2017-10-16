@@ -88,5 +88,6 @@
 |veil of maya                             |  [X]   |  [X]   |
 |wage war                                 |  [ ]   |  [X]   |
 |within the ruins                         |  [ ]   |  [X]   |
+|wolves at the gate                       |  [X]   |  [ ]   |
 |wsoilwork                                |  [ ]   |  [X]   |
 |xandria                                  |  [ ]   |  [X]   |
