@@ -1,4 +1,4 @@
-|Band                                     | Jarrod | Humzah |
+|Band                                    | Jarrod | Humzah |
 |-----------------------------------------|:------:|:------:|
 |aborted                                  |  [ ]   |  [X]   |
 |accept                                   |  [ ]   |  [X]   |
@@ -32,6 +32,7 @@
 |evil scarecrow                           |  [X]   |  [X]   |
 |fallujah                                 |  [ ]   |  [X]   |
 |five finger death punch                  |  [X]   |  [X]   |
+|fit for a king                           |  [X]   |  [ ]   |
 |fleshgod apocalypse                      |  [ ]   |  [X]   |
 |flyleaf                                  |  [X]   |  [X]   |
 |ghost                                    |  [ ]   |  [X]   |
