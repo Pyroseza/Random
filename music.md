@@ -85,7 +85,6 @@
 |theatre of tragedy                       |  [x]   |  [ ]   |
 |thy art is murder                        |  [ ]   |  [x]   |
 |trivium                                  |  [x]   |  [x]   |
-|trivium                                  |  [x]   |  [x]   |
 |veil of maya                             |  [x]   |  [x]   |
 |wage war                                 |  [ ]   |  [x]   |
 |within the ruins                         |  [ ]   |  [x]   |
