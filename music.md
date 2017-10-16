@@ -1,93 +1,93 @@
 |Band                                     | Jarrod | Humzah |
 |-----------------------------------------|:------:|:------:|
-|arch enemy                               |  [ ]   |  [x]   |
-|killswitch engage                        |  [ ]   |  [x]   |
-|lacuna coil                              |  [ ]   |  [x]   |
-|flyleaf                                  |  [x]   |  [x]   |
-|nightwish                                |  [x]   |  [x]   |
-|xandria                                  |  [ ]   |  [x]   |
-|delain                                   |  [ ]   |  [x]   |
-|fleshgod apocalypse                      |  [ ]   |  [x]   |
-|chimaira                                 |  [ ]   |  [x]   |
-|children of bodom                        |  [x]   |  [x]   |
-|sabaton                                  |  [x]   |  [x]   |
-|mastodon                                 |  [ ]   |  [x]   |
-|trivium                                  |  [x]   |  [x]   |
-|veil of maya                             |  [x]   |  [x]   |
-|fallujah                                 |  [ ]   |  [x]   |
-|chelsea grin                             |  [ ]   |  [x]   |
-|alestorm                                 |  [x]   |  [x]   |
-|august burns red                         |  [x]   |  [x]   |
-|miss may i                               |  [ ]   |  [x]   |
-|heart of a coward                        |  [ ]   |  [x]   |
-|trivium                                  |  [x]   |  [x]   |
-|korn                                     |  [x]   |  [x]   |
-|opeth                                    |  [ ]   |  [x]   |
-|limp bizkit                              |  [ ]   |  [x]   |
-|bullet for my valentine                  |  [x]   |  [x]   |
-|dead by april                            |  [ ]   |  [x]   |
-|five finger death punch                  |  [x]   |  [x]   |
 |aborted                                  |  [ ]   |  [x]   |
-|shadow of intent                         |  [ ]   |  [x]   |
-|mors principium est                      |  [ ]   |  [x]   |
-|thy art is murder                        |  [ ]   |  [x]   |
-|morbid angel                             |  [ ]   |  [x]   |
-|wage war                                 |  [ ]   |  [x]   |
 |accept                                   |  [ ]   |  [x]   |
-|byzantine                                |  [ ]   |  [x]   |
-|paradise lost                            |  [ ]   |  [x]   |
+|after the burial                         |  [ ]   |  [x]   |
+|airbourne                                |  [ ]   |  [x]   |
+|alestorm                                 |  [x]   |  [x]   |
+|arch enemy                               |  [ ]   |  [x]   |
+|august burns red                         |  [x]   |  [x]   |
+|avenged sevenfold                        |  [x]   |  [x]   |
+|ayreon                                   |  [ ]   |  [x]   |
 |blind guardian                           |  [ ]   |  [x]   |
+|bullet for my valentine                  |  [x]   |  [x]   |
+|byzantine                                |  [ ]   |  [x]   |
+|chelsea grin                             |  [ ]   |  [x]   |
+|children of bodom                        |  [x]   |  [x]   |
+|chimaira                                 |  [ ]   |  [x]   |
+|dead by april                            |  [ ]   |  [x]   |
 |decapitated                              |  [ ]   |  [x]   |
-|municipal waste                          |  [ ]   |  [x]   |
-|the acacia strain                        |  [ ]   |  [x]   |
-|enfold darkness                          |  [ ]   |  [x]   |
-|iced earth                               |  [ ]   |  [x]   |
-|suffocation                              |  [ ]   |  [x]   |
+|delain                                   |  [ ]   |  [x]   |
+|demon hunter                             |  [ ]   |  [x]   |
+|destroyer 666                            |  [ ]   |  [x]   |
+|dimmu borgir                             |  [ ]   |  [x]   |
+|disarmonia mundi                         |  [x]   |  [ ]   |
+|disturbed                                |  [x]   |  [x]   |
 |dragonforce                              |  [x]   |  [x]   |
 |dream evil                               |  [ ]   |  [x]   |
-|sikth                                    |  [ ]   |  [x]   |
-|rhapsody of fire                         |  [ ]   |  [x]   |
-|ennslaved                                |  [ ]   |  [x]   |
-|oceano                                   |  [ ]   |  [x]   |
-|motionless in white                      |  [ ]   |  [x]   |
-|slaughter to prevail                     |  [ ]   |  [x]   |
-|dimmu borgir                             |  [ ]   |  [x]   |
-|ayreon                                   |  [ ]   |  [x]   |
-|september morning                        |  [ ]   |  [x]   |
-|demon hunter                             |  [ ]   |  [x]   |
-|katatonia                                |  [ ]   |  [x]   |
-|obituary                                 |  [ ]   |  [x]   |
-|within the ruins                         |  [ ]   |  [x]   |
-|suicide silence                          |  [ ]   |  [x]   |
-|kreator                                  |  [ ]   |  [x]   |
-|seuplutra                                |  [ ]   |  [x]   |
-|pantera                                  |  [x]   |  [x]   |
-|iron maiden                              |  [x]   |  [x]   |
-|gojira                                   |  [ ]   |  [x]   |
-|metallica                                |  [x]   |  [x]   |
-|avenged sevenfold                        |  [x]   |  [x]   |
-|motorhead                                |  [ ]   |  [x]   |
-|megadeth                                 |  [ ]   |  [x]   |
-|lamb of god                              |  [ ]   |  [x]   |
-|in flames                                |  [ ]   |  [x]   |
-|testament                                |  [ ]   |  [x]   |
-|epica                                    |  [x]   |  [x]   |
-|airbourne                                |  [ ]   |  [x]   |
-|destroyer 666                            |  [ ]   |  [x]   |
-|ghost                                    |  [ ]   |  [x]   |
-|powerwolf                                |  [ ]   |  [x]   |
-|wsoilwork                                |  [ ]   |  [x]   |
-|of mice & men                            |  [x]   |  [x]   |
-|disturbed                                |  [x]   |  [x]   |
-|parkway drive                            |  [ ]   |  [x]   |
-|after the burial                         |  [ ]   |  [x]   |
-|skalmold                                 |  [x]   |  [x]   |
-|evil scarecrow                           |  [x]   |  [x]   |
-|the unguided                             |  [x]   |  [x]   |
-|disarmonia mundi                         |  [x]   |  [ ]   |
-|oh, sleeper                              |  [x]   |  [ ]   |
-|theatre of tragedy                       |  [x]   |  [ ]   |
-|sirenia                                  |  [x]   |  [ ]   |
 |eluveitie                                |  [x]   |  [ ]   |
+|enfold darkness                          |  [ ]   |  [x]   |
+|ennslaved                                |  [ ]   |  [x]   |
+|epica                                    |  [x]   |  [x]   |
+|evil scarecrow                           |  [x]   |  [x]   |
+|fallujah                                 |  [ ]   |  [x]   |
+|five finger death punch                  |  [x]   |  [x]   |
+|fleshgod apocalypse                      |  [ ]   |  [x]   |
+|flyleaf                                  |  [x]   |  [x]   |
+|ghost                                    |  [ ]   |  [x]   |
+|gojira                                   |  [ ]   |  [x]   |
+|heart of a coward                        |  [ ]   |  [x]   |
+|iced earth                               |  [ ]   |  [x]   |
+|in flames                                |  [ ]   |  [x]   |
+|iron maiden                              |  [x]   |  [x]   |
+|katatonia                                |  [ ]   |  [x]   |
+|killswitch engage                        |  [ ]   |  [x]   |
+|korn                                     |  [x]   |  [x]   |
 |korpiklaani                              |  [x]   |  [ ]   |
+|kreator                                  |  [ ]   |  [x]   |
+|lacuna coil                              |  [ ]   |  [x]   |
+|lamb of god                              |  [ ]   |  [x]   |
+|limp bizkit                              |  [ ]   |  [x]   |
+|mastodon                                 |  [ ]   |  [x]   |
+|megadeth                                 |  [ ]   |  [x]   |
+|metallica                                |  [x]   |  [x]   |
+|miss may i                               |  [ ]   |  [x]   |
+|morbid angel                             |  [ ]   |  [x]   |
+|mors principium est                      |  [ ]   |  [x]   |
+|motionless in white                      |  [ ]   |  [x]   |
+|motorhead                                |  [ ]   |  [x]   |
+|municipal waste                          |  [ ]   |  [x]   |
+|nightwish                                |  [x]   |  [x]   |
+|obituary                                 |  [ ]   |  [x]   |
+|oceano                                   |  [ ]   |  [x]   |
+|of mice & men                            |  [x]   |  [x]   |
+|oh, sleeper                              |  [x]   |  [ ]   |
+|opeth                                    |  [ ]   |  [x]   |
+|pantera                                  |  [x]   |  [x]   |
+|paradise lost                            |  [ ]   |  [x]   |
+|parkway drive                            |  [ ]   |  [x]   |
 |powerflo                                 |  [x]   |  [ ]   |
+|powerwolf                                |  [ ]   |  [x]   |
+|rhapsody of fire                         |  [ ]   |  [x]   |
+|sabaton                                  |  [x]   |  [x]   |
+|september morning                        |  [ ]   |  [x]   |
+|seuplutra                                |  [ ]   |  [x]   |
+|shadow of intent                         |  [ ]   |  [x]   |
+|sikth                                    |  [ ]   |  [x]   |
+|sirenia                                  |  [x]   |  [ ]   |
+|skalmold                                 |  [x]   |  [x]   |
+|slaughter to prevail                     |  [ ]   |  [x]   |
+|suffocation                              |  [ ]   |  [x]   |
+|suicide silence                          |  [ ]   |  [x]   |
+|testament                                |  [ ]   |  [x]   |
+|the acacia strain                        |  [ ]   |  [x]   |
+|the unguided                             |  [x]   |  [x]   |
+|theatre of tragedy                       |  [x]   |  [ ]   |
+|thy art is murder                        |  [ ]   |  [x]   |
+|trivium                                  |  [x]   |  [x]   |
+|trivium                                  |  [x]   |  [x]   |
+|veil of maya                             |  [x]   |  [x]   |
+|wage war                                 |  [ ]   |  [x]   |
+|within the ruins                         |  [ ]   |  [x]   |
+|wsoilwork                                |  [ ]   |  [x]   |
+|xandria                                  |  [ ]   |  [x]   |
