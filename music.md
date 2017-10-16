@@ -81,3 +81,13 @@
 |disturbed                                |  [x]   |  [x]   |
 |parkway drive                            |  [ ]   |  [x]   |
 |after the burial                         |  [ ]   |  [x]   |
+|skalmold                                 |  [x]   |  [x]   |
+|evil scarecrow                           |  [x]   |  [x]   |
+|the unguided                             |  [x]   |  [x]   |
+|disarmonia mundi                         |  [x]   |  [ ]   |
+|oh, sleeper                              |  [x]   |  [ ]   |
+|theatre of tragedy                       |  [x]   |  [ ]   |
+|sirenia                                  |  [x]   |  [ ]   |
+|eluveitie                                |  [x]   |  [ ]   |
+|korpiklaani                              |  [x]   |  [ ]   |
+|powerflo                                 |  [x]   |  [ ]   |
