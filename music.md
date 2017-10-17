@@ -44,7 +44,7 @@
 |katatonia                                |  [ ]   |  [X]   |
 |killswitch engage                        |  [ ]   |  [X]   |
 |korn                                     |  [X]   |  [X]   |
-|korpiklaani                              |  [X]   |  [ ]   |
+|korpiklaani                              |  [X]   |  [X]   |
 |kreator                                  |  [ ]   |  [X]   |
 |lacuna coil                              |  [ ]   |  [X]   |
 |lamb of god                              |  [ ]   |  [X]   |
@@ -62,7 +62,7 @@
 |obituary                                 |  [ ]   |  [X]   |
 |oceano                                   |  [ ]   |  [X]   |
 |of mice & men                            |  [X]   |  [X]   |
-|oh, sleeper                              |  [X]   |  [ ]   |
+|oh, sleeper                              |  [X]   |  [X]   |
 |opeth                                    |  [ ]   |  [X]   |
 |pantera                                  |  [X]   |  [X]   |
 |paradise lost                            |  [ ]   |  [X]   |
@@ -75,7 +75,7 @@
 |seuplutra                                |  [ ]   |  [X]   |
 |shadow of intent                         |  [ ]   |  [X]   |
 |sikth                                    |  [ ]   |  [X]   |
-|sirenia                                  |  [X]   |  [ ]   |
+|sirenia                                  |  [X]   |  [X]   |
 |skalmold                                 |  [X]   |  [X]   |
 |slaughter to prevail                     |  [ ]   |  [X]   |
 |suffocation                              |  [ ]   |  [X]   |
@@ -83,7 +83,7 @@
 |testament                                |  [ ]   |  [X]   |
 |the acacia strain                        |  [ ]   |  [X]   |
 |the unguided                             |  [X]   |  [X]   |
-|theatre of tragedy                       |  [X]   |  [ ]   |
+|theatre of tragedy                       |  [X]   |  [X]   |
 |thy art is murder                        |  [ ]   |  [X]   |
 |trivium                                  |  [X]   |  [X]   |
 |veil of maya                             |  [X]   |  [X]   |
