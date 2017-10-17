@@ -51,6 +51,7 @@
 |limp bizkit                              |  [ ]   |  [X]   |
 |mastodon                                 |  [ ]   |  [X]   |
 |megadeth                                 |  [ ]   |  [X]   |
+|meshuggah                                |  [ ]   |  [X]   |
 |metallica                                |  [X]   |  [X]   |
 |miss may i                               |  [ ]   |  [X]   |
 |morbid angel                             |  [ ]   |  [X]   |
