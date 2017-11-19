@@ -106,6 +106,8 @@
 |slayer                                   |   X    |        |        |
 |slaughter to prevail                     |        |   X    |        |
 |slipknot                                 |   X    |        |        |
+|soil                                     |   X    |   X    |        |
+|soilwork                                 |        |   X    |        |
 |suffocation                              |        |   X    |        |
 |suicide silence                          |        |   X    |        |
 |sum 41                                   |   X    |        |        |
@@ -122,5 +124,4 @@
 |wage war                                 |        |   X    |        |
 |within the ruins                         |        |   X    |        |
 |wolves at the gate                       |   X    |        |        |
-|wsoilwork                                |        |   X    |        |
 |xandria                                  |        |   X    |        |
