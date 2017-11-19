@@ -9,6 +9,7 @@
 |august burns red                         |  [X]   |  [X]   |
 |avenged sevenfold                        |  [X]   |  [X]   |
 |ayreon                                   |  [ ]   |  [X]   |
+|black sabbath                            |  [X]   |  [ ]   |
 |blind guardian                           |  [ ]   |  [X]   |
 |bullet for my valentine                  |  [X]   |  [X]   |
 |byzantine                                |  [ ]   |  [X]   |
@@ -36,11 +37,13 @@
 |fleshgod apocalypse                      |  [ ]   |  [X]   |
 |flyleaf                                  |  [X]   |  [X]   |
 |ghost                                    |  [ ]   |  [X]   |
+|goatwhore                                |  [X]   |  [ ]   |
 |gojira                                   |  [ ]   |  [X]   |
 |heart of a coward                        |  [ ]   |  [X]   |
 |iced earth                               |  [ ]   |  [X]   |
 |in flames                                |  [ ]   |  [X]   |
 |iron maiden                              |  [X]   |  [X]   |
+|judas priest                             |  [X]   |  [ ]   |
 |katatonia                                |  [ ]   |  [X]   |
 |killswitch engage                        |  [ ]   |  [X]   |
 |korn                                     |  [X]   |  [X]   |
@@ -49,6 +52,7 @@
 |lacuna coil                              |  [ ]   |  [X]   |
 |lamb of god                              |  [ ]   |  [X]   |
 |limp bizkit                              |  [ ]   |  [X]   |
+|machine head                             |  [X]   |  [ ]   |
 |mastodon                                 |  [ ]   |  [X]   |
 |megadeth                                 |  [ ]   |  [X]   |
 |meshuggah                                |  [ ]   |  [X]   |
@@ -78,6 +82,7 @@
 |sikth                                    |  [ ]   |  [X]   |
 |sirenia                                  |  [X]   |  [X]   |
 |skalmold                                 |  [X]   |  [X]   |
+|slayer                                   |  [X]   |  [ ]   |
 |slaughter to prevail                     |  [ ]   |  [X]   |
 |suffocation                              |  [ ]   |  [X]   |
 |suicide silence                          |  [ ]   |  [X]   |
