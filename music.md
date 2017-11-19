@@ -18,14 +18,14 @@
 |bring me the horizon                     |   X    |        |        |
 |bullet for my valentine                  |   X    |   X    |        |
 |byzantine                                |        |   X    |        |
-|chelsea grin                             |        |   X    |        |
+|chelsea grin                             |   X    |   X    |        |
 |children of bodom                        |   X    |   X    |        |
 |chimaira                                 |   X    |   X    |        |
 |corpus mortale                           |   X    |        |        |
 |dead by april                            |        |   X    |        |
 |decapitated                              |        |   X    |        |
 |delain                                   |        |   X    |        |
-|demon hunter                             |        |   X    |        |
+|demon hunter                             |   X    |   X    |        |
 |destroyer 666                            |        |   X    |        |
 |dimmu borgir                             |        |   X    |        |
 |disarmonia mundi                         |   X    |        |        |
@@ -79,7 +79,7 @@
 |motionless in white                      |        |   X    |        |
 |motorhead                                |        |   X    |        |
 |municipal waste                          |        |   X    |        |
-|muse                                     |        |   X    |        |
+|muse                                     |   X    |        |        |
 |nightwish                                |   X    |   X    |        |
 |obituary                                 |        |   X    |        |
 |oceano                                   |        |   X    |        |
