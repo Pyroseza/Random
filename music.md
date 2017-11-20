@@ -1,28 +1,28 @@
 |Band                                     | Jarrod | Humzah |  Ruan  |
 |-----------------------------------------|:------:|:------:|:------:|
 |aborted                                  |        |   X    |        |
-|ac/dc                                    |   X    |        |        |
+|ac/dc                                    |   X    |   X    |        |
 |accept                                   |        |   X    |        |
 |after the burial                         |        |   X    |        |
 |airbourne                                |        |   X    |        |
 |alestorm                                 |   X    |   X    |        |
 |arch enemy                               |   X    |   X    |        |
 |amaranthe                                |   X    |        |        |
-|anthrax                                  |   X    |        |        |
-|apocalyptica                             |   X    |        |        |
+|anthrax                                  |   X    |   X    |        |
+|apocalyptica                             |   X    |   X    |        |
 |august burns red                         |   X    |   X    |        |
 |avenged sevenfold                        |   X    |   X    |        |
 |ayreon                                   |        |   X    |        |
-|black sabbath                            |   X    |        |        |
+|black sabbath                            |   X    |   X    |        |
 |blind guardian                           |        |   X    |        |
-|blink 182                                |   X    |        |        |
-|bring me the horizon                     |   X    |        |        |
+|blink 182                                |   X    |   X    |        |
+|bring me the horizon                     |   X    |   X    |        |
 |bullet for my valentine                  |   X    |   X    |        |
 |byzantine                                |        |   X    |        |
 |chelsea grin                             |   X    |   X    |        |
 |children of bodom                        |   X    |   X    |        |
 |chimaira                                 |   X    |   X    |        |
-|corpus mortale                           |   X    |        |        |
+|corpus mortale                           |   X    |   X    |        |
 |dead by april                            |        |   X    |        |
 |decapitated                              |        |   X    |        |
 |delain                                   |        |   X    |        |
@@ -34,7 +34,7 @@
 |dragonforce                              |   X    |   X    |        |
 |dream evil                               |        |   X    |        |
 |eluveitie                                |   X    |        |        |
-|eminem                                   |   X    |        |        |
+|eminem                                   |   X    |   X    |        |
 |enfold darkness                          |        |   X    |        |
 |ennslaved                                |        |   X    |        |
 |epica                                    |   X    |   X    |        |
@@ -46,18 +46,18 @@
 |fleshgod apocalypse                      |        |   X    |        |
 |flyleaf                                  |   X    |   X    |        |
 |fokofpolisiekar                          |   X    |        |        |
-|foo fighters                             |   X    |        |        |
+|foo fighters                             |   X    |   X    |        |
 |ghost                                    |        |   X    |        |
 |goatwhore                                |   X    |        |        |
 |gojira                                   |        |   X    |        |
-|guns n' roses                            |   X    |        |        |
+|guns n' roses                            |   X    |   X    |        |
 |heart of a coward                        |        |   X    |        |
 |iced earth                               |        |   X    |        |
 |in flames                                |        |   X    |        |
 |iron maiden                              |   X    |   X    |        |
 |incarnia                                 |   X    |   X    |        |
-|judas priest                             |   X    |        |        |
-|kamelot                                  |   X    |        |        |
+|judas priest                             |   X    |   X    |        |
+|kamelot                                  |   X    |   X    |        |
 |katatonia                                |        |   X    |        |
 |kansas                                   |   X    |        |        |
 |killswitch engage                        |        |   X    |        |
@@ -67,9 +67,9 @@
 |lacuna coil                              |        |   X    |        |
 |lordi                                    |   X    |        |        |
 |lamb of god                              |        |   X    |        |
-|linkin park                              |   X    |        |        |
+|linkin park                              |   X    |   X    |        |
 |limp bizkit                              |        |   X    |        |
-|machine head                             |   X    |        |        |
+|machine head                             |   X    |   X    |        |
 |mastodon                                 |        |   X    |        |
 |megadeth                                 |        |   X    |        |
 |meshuggah                                |        |   X    |        |
@@ -80,7 +80,7 @@
 |motionless in white                      |        |   X    |        |
 |motorhead                                |        |   X    |        |
 |municipal waste                          |        |   X    |        |
-|muse                                     |   X    |        |        |
+|muse                                     |   X    |   X    |        |
 |nightwish                                |   X    |   X    |        |
 |obituary                                 |        |   X    |        |
 |oceano                                   |        |   X    |        |
@@ -91,10 +91,10 @@
 |pantera                                  |   X    |   X    |        |
 |paradise lost                            |        |   X    |        |
 |parkway drive                            |        |   X    |        |
-|pink floyd                               |   X    |        |        |
+|pink floyd                               |   X    |   X    |        |
 |powerflo                                 |   X    |        |        |
 |powerwolf                                |        |   X    |        |
-|rammstein                                |   X    |        |        |
+|rammstein                                |   X    |   X    |        |
 |rhapsody of fire                         |        |   X    |        |
 |sabaton                                  |   X    |   X    |        |
 |september morning                        |        |   X    |        |
@@ -104,25 +104,25 @@
 |sikth                                    |        |   X    |        |
 |sirenia                                  |   X    |   X    |        |
 |skalmold                                 |   X    |   X    |        |
-|slayer                                   |   X    |        |        |
+|slayer                                   |   X    |   X    |        |
 |slaughter to prevail                     |        |   X    |        |
-|slipknot                                 |   X    |        |        |
+|slipknot                                 |   X    |   X    |        |
 |soil                                     |   X    |   X    |        |
 |soilwork                                 |        |   X    |        |
 |suffocation                              |        |   X    |        |
 |suicide silence                          |        |   X    |        |
 |sum 41                                   |   X    |        |        |
-|system of a down                         |   X    |        |        |
+|system of a down                         |   X    |   X    |        |
 |testament                                |        |   X    |        |
 |the acacia strain                        |        |   X    |        |
 |the offspring                            |   X    |        |        |
 |the unguided                             |   X    |   X    |        |
 |theatre of tragedy                       |   X    |   X    |        |
-|three days grace                         |   X    |        |        |
+|three days grace                         |   X    |   X    |        |
 |thy art is murder                        |   X    |   X    |        |
 |trivium                                  |   X    |   X    |        |
 |veil of maya                             |   X    |   X    |        |
 |wage war                                 |        |   X    |        |
 |within the ruins                         |        |   X    |        |
-|wolves at the gate                       |   X    |        |        |
+|wolves at the gate                       |   X    |   X    |        |
 |xandria                                  |        |   X    |        |
