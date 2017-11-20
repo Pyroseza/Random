@@ -8,6 +8,7 @@
 |alestorm                                 |   X    |   X    |        |
 |arch enemy                               |   X    |   X    |        |
 |amaranthe                                |   X    |        |        |
+|anthrax                                  |   X    |        |        |
 |apocalyptica                             |   X    |        |        |
 |august burns red                         |   X    |   X    |        |
 |avenged sevenfold                        |   X    |   X    |        |
