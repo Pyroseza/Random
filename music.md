@@ -1,128 +1,383 @@
-|Band                                     | Jarrod | Humzah |  Ruan  | Thomas |
-|-----------------------------------------|:------:|:------:|:------:|:------:|
-|aborted                                  |        |   X    |        |        |
-|ac/dc                                    |   X    |   X    |        |        |
-|accept                                   |        |   X    |        |        |
-|after the burial                         |        |   X    |        |        |
-|airbourne                                |        |   X    |        |        |
-|alestorm                                 |   X    |   X    |        |        |
-|arch enemy                               |   X    |   X    |        |        |
-|amaranthe                                |   X    |        |        |        |
-|anthrax                                  |   X    |   X    |        |        |
-|apocalyptica                             |   X    |   X    |        |        |
-|august burns red                         |   X    |   X    |        |        |
-|avenged sevenfold                        |   X    |   X    |        |        |
-|ayreon                                   |        |   X    |        |        |
-|black sabbath                            |   X    |   X    |        |        |
-|blind guardian                           |        |   X    |        |        |
-|blink 182                                |   X    |   X    |        |        |
-|bring me the horizon                     |   X    |   X    |        |        |
-|bullet for my valentine                  |   X    |   X    |        |        |
-|byzantine                                |        |   X    |        |        |
-|chelsea grin                             |   X    |   X    |        |        |
-|children of bodom                        |   X    |   X    |        |        |
-|chimaira                                 |   X    |   X    |        |        |
-|corpus mortale                           |   X    |   X    |        |        |
-|dead by april                            |        |   X    |        |        |
-|decapitated                              |        |   X    |        |        |
-|delain                                   |        |   X    |        |        |
-|demon hunter                             |   X    |   X    |        |        |
-|destroyer 666                            |        |   X    |        |        |
-|dimmu borgir                             |        |   X    |        |        |
-|disarmonia mundi                         |   X    |        |        |        |
-|disturbed                                |   X    |   X    |        |        |
-|dragonforce                              |   X    |   X    |        |        |
-|dream evil                               |        |   X    |        |        |
-|eluveitie                                |   X    |        |        |        |
-|eminem                                   |   X    |   X    |        |        |
-|enfold darkness                          |        |   X    |        |        |
-|ennslaved                                |        |   X    |        |        |
-|epica                                    |   X    |   X    |        |        |
-|evil scarecrow                           |   X    |   X    |        |        |
-|fall out boy                             |   X    |        |        |        |
-|fallujah                                 |        |   X    |        |        |
-|five finger death punch                  |   X    |   X    |        |        |
-|fit for a king                           |   X    |        |        |        |
-|fleshgod apocalypse                      |        |   X    |        |        |
-|flyleaf                                  |   X    |   X    |        |        |
-|fokofpolisiekar                          |   X    |        |        |        |
-|foo fighters                             |   X    |   X    |        |        |
-|ghost                                    |        |   X    |        |        |
-|goatwhore                                |   X    |        |        |        |
-|gojira                                   |        |   X    |        |        |
-|guns n' roses                            |   X    |   X    |        |        |
-|heart of a coward                        |        |   X    |        |        |
-|iced earth                               |        |   X    |        |        |
-|in flames                                |        |   X    |        |        |
-|iron maiden                              |   X    |   X    |        |        |
-|incarnia                                 |   X    |   X    |        |        |
-|judas priest                             |   X    |   X    |        |        |
-|kamelot                                  |   X    |   X    |        |        |
-|katatonia                                |        |   X    |        |        |
-|kansas                                   |   X    |        |        |        |
-|killswitch engage                        |        |   X    |        |        |
-|korn                                     |   X    |   X    |        |        |
-|korpiklaani                              |   X    |   X    |        |        |
-|kreator                                  |        |   X    |        |        |
-|lacuna coil                              |        |   X    |        |        |
-|lordi                                    |   X    |        |        |        |
-|lamb of god                              |        |   X    |        |        |
-|linkin park                              |   X    |   X    |        |        |
-|limp bizkit                              |        |   X    |        |        |
-|machine head                             |   X    |   X    |        |        |
-|mastodon                                 |        |   X    |        |        |
-|megadeth                                 |        |   X    |        |        |
-|meshuggah                                |        |   X    |        |        |
-|metallica                                |   X    |   X    |        |        |
-|miss may i                               |        |   X    |        |        |
-|morbid angel                             |        |   X    |        |        |
-|mors principium est                      |        |   X    |        |        |
-|motionless in white                      |        |   X    |        |        |
-|motorhead                                |        |   X    |        |        |
-|municipal waste                          |        |   X    |        |        |
-|muse                                     |   X    |   X    |        |        |
-|nightwish                                |   X    |   X    |        |        |
-|obituary                                 |        |   X    |        |        |
-|oceano                                   |        |   X    |        |        |
-|of mice & men                            |   X    |   X    |        |        |
-|oh, sleeper                              |   X    |   X    |        |        |
-|opeth                                    |        |   X    |        |        |
-|panic! at the disco                      |   X    |        |        |        |
-|pantera                                  |   X    |   X    |        |        |
-|paradise lost                            |        |   X    |        |        |
-|parkway drive                            |        |   X    |        |        |
-|pink floyd                               |   X    |   X    |        |        |
-|powerflo                                 |   X    |        |        |        |
-|powerwolf                                |        |   X    |        |        |
-|rammstein                                |   X    |   X    |        |        |
-|rhapsody of fire                         |        |   X    |        |        |
-|sabaton                                  |   X    |   X    |        |        |
-|september morning                        |        |   X    |        |        |
-|seuplutra                                |        |   X    |        |        |
-|shadow of intent                         |        |   X    |        |        |
-|sick puppies                             |   X    |        |        |        |
-|sikth                                    |        |   X    |        |        |
-|sirenia                                  |   X    |   X    |        |        |
-|skalmold                                 |   X    |   X    |        |        |
-|slayer                                   |   X    |   X    |        |        |
-|slaughter to prevail                     |        |   X    |        |        |
-|slipknot                                 |   X    |   X    |        |        |
-|soil                                     |   X    |   X    |        |        |
-|soilwork                                 |        |   X    |        |        |
-|suffocation                              |        |   X    |        |        |
-|suicide silence                          |        |   X    |        |        |
-|sum 41                                   |   X    |        |        |        |
-|system of a down                         |   X    |   X    |        |        |
-|testament                                |        |   X    |        |        |
-|the acacia strain                        |        |   X    |        |        |
-|the offspring                            |   X    |        |        |        |
-|the unguided                             |   X    |   X    |        |        |
-|theatre of tragedy                       |   X    |   X    |        |        |
-|three days grace                         |   X    |   X    |        |        |
-|thy art is murder                        |   X    |   X    |        |        |
-|trivium                                  |   X    |   X    |        |        |
-|veil of maya                             |   X    |   X    |        |        |
-|wage war                                 |        |   X    |        |        |
-|within the ruins                         |        |   X    |        |        |
-|wolves at the gate                       |   X    |   X    |        |        |
-|xandria                                  |        |   X    |        |        |
+|Band/Artist                                			   | Jarrod  | Humzah  |  Ruan   | Thomas  | Nathan  |
+|----------------------------------------------------|:-------:|:-------:|:-------:|:-------:|:-------:|
+|30 seconds to mars									                 |         |    X    |         |         |         |
+|a day to remember                                   |         |    X    |         |         |         |
+|a different breed of killer						             |         |    X    |         |         |         |
+|a perfect circle                                    |         |    X    |         |         |         |
+|abbath                                              |         |    X    |         |         |         |
+|accept                                              |         |    X    |         |         |         |
+|abnormality                                         |         |    X    |         |         |         |
+|aborted                                             |         |    X    |         |         |         |
+|ac/dc                                               |    X    |    X    |         |         |         |
+|accept                                              |         |    X    |         |         |         |
+|aerosmith                                           |         |    X    |         |         |         |
+|after the burial                                    |         |    X    |         |         |         |
+|airbourne                                           |         |    X    |         |         |         |
+|alestorm                                            |    X    |    X    |         |         |         |
+|alice in chains                                     |         |    X    |         |         |         |
+|all shall perish                                    |         |    X    |         |         |         |
+|all that remains                                    |         |    X    |         |         |         |
+|alter bridge                                        |         |    X    |         |         |         |
+|amaranthe                                           |    X    |         |         |         |         |
+|amon amarth                                         |         |    X    |         |         |         |
+|amorphis                                            |         |    X    |         |         |         |
+|amy winehouse                                       |         |    X    |         |         |         |
+|animals as leaders                                  |         |    X    |         |         |         |
+|annihilator                                         |         |    X    |         |         |         |
+|anthrax                                             |    X    |    X    |         |         |         |
+|apocalyptica                                        |    X    |    X    |         |         |         |
+|arch enemy                                          |    X    |    X    |         |         |         |
+|architects                                          |         |    X    |         |         |         |
+|as blood runs black                                 |         |    X    |         |         |         |
+|as i lay dying                                      |         |    X    |         |         |         |
+|asking alexandria                                   |         |    X    |         |         |         |
+|at the gates                                        |         |    X    |         |         |         |
+|august burns red                                    |         |    X    |         |         |         |
+|avantasia                                           |         |    X    |         |         |         |
+|avenged sevenfold                                   |    X    |    X    |         |         |         |
+|ayreon                                              |         |    X    |         |         |         |
+|battlecross                                         |         |    X    |         |         |         |
+|beastie boys                                        |         |    X    |         |         |         |
+|behemoth                                            |         |    X    |         |         |         |
+|belay my last                                       |         |    X    |         |         |         |
+|belphegor                                           |         |    X    |         |         |         |
+|black label society                                 |         |    X    |         |         |         |
+|black sabbath                                       |    X    |    X    |         |         |         |
+|bleeding through                                    |         |    X    |         |         |         |
+|bleed from within                                   |         |    X    |         |         |         |
+|blind guardian                                      |         |    X    |         |         |         |
+|blinded colony                                      |         |    X    |         |         |         |
+|blink 182                                           |    X    |    X    |         |         |         |
+|bloodbath                                           |         |    X    |         |         |         |
+|bon jovi                                            |         |    X    |         |         |         |
+|born of osiris                                      |         |    X    |         |         |         |
+|bring me the horizon                                |    X    |    X    |         |         |         |
+|broken hope                                         |         |    X    |         |         |         |
+|bullet for my valentine                             |    X    |    X    |         |         |         |
+|bury tomorrow                                       |         |    X    |         |         |         |
+|butcher babies                                      |         |    X    |         |         |         |
+|byzantine                                           |         |    X    |         |         |         |
+|caliban                                             |         |    X    |         |         |         |
+|cannibal corpse                                     |         |    X    |         |         |         |
+|carcas                                              |         |    X    |         |         |         |
+|carnifex                                            |         |    X    |         |         |         |
+|cauldron                                            |         |    X    |         |         |         |
+|chelsea grin                                        |    X    |    X    |         |         |         |
+|children of bodom                                   |    X    |    X    |         |         |         |
+|chimaira                                            |    X    |    X    |         |         |         |
+|cradle of filth                                     |         |    X    |         |         |         |
+|corpus mortale                                      |    X    |    X    |         |         |         |
+|crossfaith                                          |         |    X    |         |         |         |
+|daft punk                                           |         |    X    |         |         |         |
+|dark funeral                                        |         |    X    |         |         |         |
+|dark tranquility                                    |         |    X    |         |         |         |
+|darkane                                             |         |    X    |         |         |         |
+|darkest hour                                        |         |    X    |         |         |         |
+|darkthrone                                          |         |    X    |         |         |         |
+|dead by april                                       |         |    X    |         |         |         |
+|deadlock                                            |         |    X    |         |         |         |
+|death                                               |         |    X    |         |         |         |
+|death angel                                         |         |    X    |         |         |         |
+|decapitated                                         |         |    X    |         |         |         |
+|decrepit birth                                      |         |    X    |         |         |         |
+|deicide                                             |         |    X    |         |         |         |
+|delain                                              |         |    X    |         |         |         |
+|deep purple                                         |         |    X    |         |         |         |
+|defeated sanity                                     |         |    X    |         |         |         |
+|deftones                                            |         |    X    |         |         |         |
+|demon hunter                                        |    X    |    X    |         |         |         |
+|denial machine                                      |         |    X    |         |         |         |
+|despite                                             |         |    X    |         |         |         |
+|despised icon                                       |         |    X    |         |         |         |
+|destroyer 666                                       |         |    X    |         |         |         |
+|devil you know                                      |         |    X    |         |         |         |
+|devildriver                                         |         |    X    |         |         |         |
+|diabulus in musica                                  |         |    X    |         |         |         |
+|dimmu borgir                                        |         |    X    |         |         |         |
+|disarmonia mundi                                    |    X    |    X    |         |         |         |
+|dismember                                           |         |    X    |         |         |         |
+|disturbed                                           |    X    |    X    |         |         |         |
+|divie heresy                                        |         |    X    |         |         |         |
+|draconian                                           |         |    X    |         |         |         |
+|dragonforce                                         |    X    |    X    |         |         |         |
+|dream evil                                          |         |    X    |         |         |         |
+|drowning pool                                       |         |    X    |         |         |         |
+|eagles of death metal                               |         |    X    |         |         |         |
+|electric six                                        |         |    X    |         |         |         |
+|edenbridge                                          |         |    X    |         |         |         |
+|electric wizard                                     |         |    X    |         |         |         |
+|eluveitie                                           |    X    |         |         |         |         |
+|elysia                                              |         |    X    |         |         |         |
+|elysion                                             |         |    X    |         |         |         |
+|eminem                                              |    X    |    X    |         |         |         |
+|emperor                                             |         |    X    |         |         |         |
+|enfold darkness                                     |         |    X    |         |         |         |
+|ennslaved                                           |         |    X    |         |         |         |
+|entombed A.D                                        |         |    X    |         |         |         |
+|enslaved                                            |         |    X    |         |         |         |
+|epica                                               |    X    |    X    |         |         |         |
+|erra                                                |         |    X    |         |         |         |
+|eternal lord                                        |         |    X    |         |         |         |
+|europe                                              |         |    X    |         |         |         |
+|eurythmics                                          |         |    X    |         |         |         |
+|evanescence                                         |         |    X    |         |         |         |
+|evil nine                                           |         |    X    |         |         |         |
+|evil scarecrow                                      |    X    |    X    |         |         |         |
+|evile                                               |         |    X    |         |         |         |
+|ex deo                                              |         |    X    |         |         |         |
+|exhumed                                             |         |    X    |         |         |         |
+|fall out boy                                        |    X    |         |         |         |         |
+|fallujah                                            |         |    X    |         |         |         |
+|fear factory                                        |         |    X    |         |         |         |
+|fleetwood mac                                       |         |    X    |         |         |         |
+|first blood                                         |         |    X    |         |         |         |
+|fit for a king                                      |    X    |         |         |         |         |
+|five finger death punch                             |    X    |    X    |         |         |         |
+|fleshgod apocalypse                                 |         |    X    |         |         |         |
+|flyleaf                                             |    X    |    X    |         |         |         |
+|fokofpolisiekar                                     |    X    |         |         |         |         |
+|foo fighters                                        |    X    |    X    |         |         |         |
+|fozzy                                               |         |    X    |         |         |         |
+|from graves of valor                                |         |    X    |         |         |         |
+|from the shallows                                   |         |    X    |         |         |         |
+|garbage                                             |         |    X    |         |         |         |
+|genesis                                             |         |    X    |         |         |         |
+|ghost                                               |         |    X    |         |         |         |
+|ghost of a fallen age                               |         |    X    |         |         |         |
+|goatwhore                                           |    X    |         |         |         |         |
+|godsmack                                            |         |    X    |         |         |         |
+|gojira                                              |         |    X    |         |         |         |
+|gorefest                                            |         |    X    |         |         |         |
+|grand magus                                         |         |    X    |         |         |         |
+|guns n' roses                                       |    X    |    X    |         |         |         |
+|gwar                                                |         |    X    |         |         |         |
+|halestorm                                           |         |    X    |         |         |         |
+|hammer fight                                        |         |    X    |         |         |         |
+|hammerfall                                          |         |    X    |         |         |         |
+|hate                                                |         |    X    |         |         |         |
+|hatebreed                                           |         |    X    |         |         |         |
+|heart of a coward                                   |         |    X    |         |         |         |
+|heaven shall burn                                   |         |    X    |         |         |         |
+|helloween                                           |         |    X    |         |         |         |
+|hellyeah                                            |         |    X    |         |         |         |
+|hiroshima will burn                                 |         |    X    |         |         |         |
+|huntress                                            |         |    X    |         |         |         |
+|hypocrisy                                           |         |    X    |         |         |         |
+|i killed the prom queen                             |         |    X    |         |         |         |
+|i prevail                                           |         |    X    |         |         |         |
+|iced earth                                          |         |    X    |         |         |         |
+|immolation                                          |         |    X    |         |         |         |
+|immortal                                            |         |    X    |         |         |         |
+|impaled                                             |         |    X    |         |         |         |
+|in flames                                           |         |    X    |         |         |         |
+|in this moment                                      |         |    X    |         |         |         |
+|incarnia                                            |    X    |    X    |         |         |         |
+|insomnium                                           |         |    X    |         |         |         |
+|iron maiden                                         |    X    |    X    |         |         |         |
+|james labrie                                        |         |    X    |         |         |         |
+|jimi hendrix                                        |         |    X    |         |         |         |
+|jinjer                                              |         |    X    |         |         |         |
+|journey                                             |         |    X    |         |         |         |
+|judas priest                                        |    X    |    X    |         |         |         |
+|kamelot                                             |    X    |    X    |         |         |         |
+|kasabian                                            |         |    X    |         |         |         |
+|kansas                                              |    X    |         |         |         |         |
+|katatonia                                           |         |    X    |         |         |         |
+|kataklysm                                           |         |    X    |         |         |         |
+|killswitch engage                                   |         |    X    |         |         |         |
+|kiss                                                |         |    X    |         |         |         |
+|korn                                                |    X    |    X    |         |         |         |
+|korpiklaani                                         |    X    |    X    |         |         |         |
+|kreator                                             |         |    X    |         |         |         |
+|krisiun                                             |         |    X    |         |         |         |
+|krypteria                                           |         |    X    |         |         |         |
+|lacuna coil                                         |         |    X    |         |         |         |
+|lamb of god                                         |         |    X    |         |         |         |
+|leaves eyes                                         |         |    X    |         |         |         |
+|led zeppelin                                        |         |    X    |         |         |         |
+|limp bizkit                                         |         |    X    |         |         |         |
+|linkin park                                         |    X    |    X    |         |         |         |
+|lionheart                                           |         |    X    |         |         |         |
+|lostprophets                                        |         |    X    |         |         |         |
+|lordi                                               |    X    |         |         |         |         |
+|lower than atlantis                                 |         |    X    |         |         |         |
+|machine head                                        |    X    |    X    |         |         |         |
+|malevolent creation                                 |         |    X    |         |         |         |
+|marduk                                              |         |    X    |         |         |         |
+|massacre                                            |         |    X    |         |         |         |
+|mastodon                                            |         |    X    |         |         |         |
+|mechanical god creation                             |         |    X    |         |         |         |
+|megadeth                                            |         |    X    |         |         |         |
+|meshuggah                                           |         |    X    |         |         |         |
+|metal church                                        |         |    X    |         |         |         |
+|metallica                                           |    X    |    X    |         |         |         |
+|michael jackson                                     |         |    X    |         |         |         |
+|miss may i                                          |         |    X    |         |         |         |
+|morbid angel                                        |         |    X    |         |         |         |
+|mors principium est                                 |         |    X    |         |         |         |
+|motionless in white                                 |         |    X    |         |         |         |
+|motorhead                                           |         |    X    |         |         |         |
+|municipal waste                                     |         |    X    |         |         |         |
+|muse                                                |    X    |    X    |         |         |         |
+|mushroomhead                                        |         |    X    |         |         |         |
+|my bitter end                                       |         |    X    |         |         |         |
+|mychildren mybride                                  |         |    X    |         |         |         |
+|narcotic wasteland                                  |         |    X    |         |         |         |
+|nasum                                               |         |    X    |         |         |         |
+|natur                                               |         |    X    |         |         |         |
+|ne obliviscaris                                     |         |    X    |         |         |         |
+|nemesea                                             |         |    X    |         |         |         |
+|nightwish                                           |    X    |    X    |         |         |         |
+|nile                                                |         |    X    |         |         |         |
+|nine inch nails                                     |         |    X    |         |         |         |
+|nirvana                                             |         |    X    |         |         |         |
+|obituary                                            |         |    X    |         |         |         |
+|obscura                                             |         |    X    |         |         |         |
+|oceano                                              |         |    X    |         |         |         |
+|odious mortem                                       |         |    X    |         |         |         |
+|of mice & men                                       |    X    |    X    |         |         |         |
+|once human                                          |         |    X    |         |         |         |
+|oh, sleeper                                         |    X    |    X    |         |         |         |
+|opeth                                               |         |    X    |         |         |         |
+|overkill                                            |         |    X    |         |         |         |
+|ozzy osbourne                                       |         |    X    |         |         |         |
+|panic! at the disco                                 |    X    |    X    |         |         |         |
+|pantera                                             |    X    |    X    |         |         |         |
+|paradise lost                                       |         |    X    |         |         |         |
+|parkway drive                                       |         |    X    |         |         |         |
+|pearl jam                                           |         |    X    |         |         |         |
+|pentakill                                           |         |    X    |         |         |         |
+|periphery                                           |         |    X    |         |         |         |
+|pink floyd                                          |    X    |    X    |         |         |         |
+|posmortem promises                                  |         |    X    |         |         |         |
+|powerflo                                            |    X    |         |         |         |         |
+|powerwolf                                           |         |    X    |         |         |         |
+|premonitions of war                                 |         |    X    |         |         |         |
+|psycroptic                                          |         |    X    |         |         |         |
+|queen                                               |         |    X    |         |         |         |
+|queens of the stone age                             |         |    X    |         |         |         |
+|queensryche                                         |         |    X    |         |         |         |
+|rage against the machine                            |         |    X    |         |         |         |
+|ragnarok                                            |         |    X    |         |         |         |
+|rammstein                                           |    X    |    X    |         |         |         |
+|red hot chilli peppers                              |         |    X    |         |         |         |
+|red queen                                           |         |    X    |         |         |         |
+|reign of fury                                       |         |    X    |         |         |         |
+|rhapsody of fire                                    |         |    X    |         |         |         |
+|rise to remain                                      |         |    X    |         |         |         |
+|red son rising                                      |         |    X    |         |         |         |
+|rhapsody of fire                                    |         |    X    |         |         |         |
+|rise to fall                                        |         |    X    |         |         |         |
+|rose funeral                                        |         |    X    |         |         |         |
+|rotting christ                                      |         |    X    |         |         |         |
+|rush                                                |         |    X    |         |         |         |
+|sabaton                                             |    X    |    X    |         |         |         |
+|saosin                                              |         |    X    |         |         |         |
+|sarke                                               |         |    X    |         |         |         |
+|scar symmetry                                       |         |    X    |         |         |         |
+|scar the martyr                                     |         |    X    |         |         |         |
+|scorpians                                           |         |    X    |         |         |         |
+|september morning                                   |         |    X    |         |         |         |
+|septic flesh                                        |         |    X    |         |         |         |
+|serpentine dominion                                 |         |    X    |         |         |         |
+|seplutra                                            |         |    X    |         |         |         |
+|sevendust                                           |         |    X    |         |         |         |
+|shadows fall                                        |         |    X    |         |         |         |
+|shadow of intent                                    |         |    X    |         |         |         |
+|shvpes                                              |         |    X    |         |         |         |
+|sick puppies                                        |    X    |         |         |         |         |
+|sikth                                               |         |    X    |         |         |         |
+|silent civiliant                                    |         |    X    |         |         |         |
+|sinai beach                                         |         |    X    |         |         |         |
+|sirenia                                             |    X    |    X    |         |         |         |
+|six feet under                                      |         |    X    |         |         |         |
+|sixx AM                                             |         |    X    |         |         |         |
+|skalmold                                            |    X    |    X    |         |         |         |
+|skindred                                            |         |    X    |         |         |         |
+|skyclad                                             |         |    X    |         |         |         |
+|slash                                               |         |    X    |         |         |         |
+|slaughter to prevail                                |         |    X    |         |         |         |
+|slayer                                              |    X    |    X    |         |         |         |
+|slipknot                                            |    X    |    X    |         |         |         |
+|soil                                                |    X    |         |         |         |         |
+|soilwork                                            |         |    X    |         |         |         |
+|solstafir                                           |         |    X    |         |         |         |
+|sonarta arctica                                     |         |    X    |         |         |         |
+|sonic syndicate                                     |         |    X    |         |         |         |
+|stevie wonder                                       |         |    X    |         |         |         |
+|stick to your guns                                  |         |    X    |         |         |         |
+|still remains                                       |         |    X    |         |         |         |
+|stitched up heart                                   |         |    X    |         |         |         |
+|stone sour                                          |         |    X    |         |         |         |
+|stratovarius                                        |         |    X    |         |         |         |
+|styles of beyond                                    |         |    X    |         |         |         |
+|suffocation                                         |         |    X    |         |         |         |
+|suffokate                                           |         |    X    |         |         |         |
+|suicide silence                                     |         |    X    |         |         |         |
+|sum 41                                              |    X    |    X    |         |         |         |
+|sylosis                                             |         |    X    |         |         |         |
+|symphony in peril                                   |         |    X    |         |         |         |
+|symphony x                                          |         |    X    |         |         |         |
+|system of a down                                    |    X    |    X    |         |         |         |
+|tenacious d                                         |         |    X    |         |         |         |
+|testament                                           |         |    X    |         |         |         |
+|textures                                            |         |    X    |         |         |         |
+|the acacia strain                                   |         |    X    |         |         |         |
+|the agonist                                         |         |    X    |         |         |         |
+|the all-american rejects                            |         |    X    |         |         |         |
+|the birthday massacre                               |         |    X    |         |         |         |
+|the black dahlia murder                             |         |    X    |         |         |         |
+|the bled                                            |         |    X    |         |         |         |
+|the cardigans                                       |         |    X    |         |         |         |
+|the chemical brothers                               |         |    X    |         |         |         |
+|the civil wars                                      |         |    X    |         |         |         |
+|the darkness                                        |         |    X    |         |         |         |
+|the doors                                           |         |    X    |         |         |         |
+|the duskfall                                        |         |    X    |         |         |         |
+|the haunted                                         |         |    X    |         |         |         |
+|the jam                                             |         |    X    |         |         |         |
+|the last felony                                     |         |    X    |         |         |         |
+|the lonely island                                   |         |    X    |         |         |         |
+|the modern age slavery                              |         |    X    |         |         |         |
+|the night flight orchestra                          |         |    X    |         |         |         |
+|the offspring                                       |    X    |    X    |         |         |         |
+|the red shore                                       |         |    X    |         |         |         |
+|the rolling stones                                  |         |    X    |         |         |         |
+|the unguided                                        |    X    |    X    |         |         |         |
+|the who                                             |         |    X    |         |         |         |
+|theatre of tragedy                                  |    X    |    X    |         |         |         |
+|therion                                             |         |    X    |         |         |         |
+|thin lizzy                                          |         |    X    |         |         |         |
+|three days grace                                    |    X    |    X    |         |         |         |
+|through fire                                        |         |    X    |         |         |         |
+|through the eyes of the dead                        |         |    X    |         |         |         |
+|thy art is murder                                   |    X    |    X    |         |         |         |
+|times of grace                                      |         |    X    |         |         |         |
+|tool                                                |         |    X    |         |         |         |
+|trivium                                             |    X    |    X    |         |         |         |
+|twilight force                                      |         |    X    |         |         |         |
+|unearth                                             |         |    X    |         |         |         |
+|unfold                                              |         |    X    |         |         |         |
+|upon a burning body                                 |         |    X    |         |         |         |
+|van halen                                           |         |    X    |         |         |         |
+|veil of maya                                        |    X    |    X    |         |         |         |
+|velvet revolver                                     |         |    X    |         |         |         |
+|volbeat                                             |         |    X    |         |         |         |
+|wage war                                            |         |    X    |         |         |         |
+|war from a harlots mouth                            |         |    X    |         |         |         |
+|warpaint                                            |         |    X    |         |         |         |
+|we came as romans                                   |         |    X    |         |         |         |
+|white striples                                      |         |    X    |         |         |         |
+|whitechapel                                         |         |    X    |         |         |         |
+|winds of plague                                     |         |    X    |         |         |         |
+|wintersun                                           |         |    X    |         |         |         |
+|with blood comes cleansing                          |         |    X    |         |         |         |
+|within temptation                                   |         |    X    |         |         |         |
+|within the ruins                                    |         |    X    |         |         |         |
+|wolfbrigade                                         |         |    X    |         |         |         |
+|wolves at the gate                                  |    X    |    X    |         |         |         |
+|wovenwar                                            |         |    X    |         |         |         |
+|xandria                                             |         |    X    |         |         |         |
+|zakk wylde                                          |         |    X    |         |         |         |
+|zornheym                                            |         |    X    |         |         |         |
+|:----------------------------------------------------------------------------------------------------:|
