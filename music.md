@@ -1,6 +1,6 @@
 |Band/Artist                        | Jarrod  | Humzah  |  Ruan   | Thomas  | Nathan  |
 |---------------------------------- |:-------:|:-------:|:-------:|:-------:|:-------:|
-|30 seconds to mars								  |         |    X    |         |         |         |
+|30 seconds to mars								  |    X    |    X    |         |         |         |
 |a day to remember                  |         |    X    |         |         |         |
 |a different breed of killer			  |         |    X    |         |         |         |
 |a perfect circle                   |         |    X    |         |         |         |
@@ -10,7 +10,7 @@
 |aborted                            |         |    X    |         |         |         |
 |ac/dc                              |    X    |    X    |         |         |         |
 |accept                             |         |    X    |         |         |         |
-|aerosmith                          |         |    X    |         |         |         |
+|aerosmith                          |    X    |    X    |         |         |         |
 |after the burial                   |         |    X    |         |         |         |
 |airbourne                          |         |    X    |         |         |         |
 |alestorm                           |    X    |    X    |         |         |         |
@@ -32,11 +32,13 @@
 |as i lay dying                     |         |    X    |         |         |         |
 |asking alexandria                  |         |    X    |         |         |         |
 |at the gates                       |         |    X    |         |         |         |
-|august burns red                   |         |    X    |         |         |         |
+|august burns red                   |    X    |    X    |         |         |         |
 |avantasia                          |         |    X    |         |         |         |
 |avenged sevenfold                  |    X    |    X    |         |         |         |
 |ayreon                             |         |    X    |         |         |         |
+|battle beast                       |    X    |         |         |         |         |
 |battlecross                        |         |    X    |         |         |         |
+|beast in black                     |    X    |         |         |         |         |
 |beastie boys                       |         |    X    |         |         |         |
 |behemoth                           |         |    X    |         |         |         |
 |belay my last                      |         |    X    |         |         |         |
@@ -49,7 +51,7 @@
 |blinded colony                     |         |    X    |         |         |         |
 |blink 182                          |    X    |    X    |         |         |         |
 |bloodbath                          |         |    X    |         |         |         |
-|bon jovi                           |         |    X    |         |         |         |
+|bon jovi                           |    X    |    X    |         |         |         |
 |born of osiris                     |         |    X    |         |         |         |
 |bring me the horizon               |    X    |    X    |         |         |         |
 |broken hope                        |         |    X    |         |         |         |
@@ -101,7 +103,7 @@
 |draconian                          |         |    X    |         |         |         |
 |dragonforce                        |    X    |    X    |         |         |         |
 |dream evil                         |         |    X    |         |         |         |
-|drowning pool                      |         |    X    |         |         |         |
+|drowning pool                      |    X    |    X    |         |         |         |
 |eagles of death metal              |         |    X    |         |         |         |
 |electric six                       |         |    X    |         |         |         |
 |edenbridge                         |         |    X    |         |         |         |
@@ -169,7 +171,7 @@
 |immolation                         |         |    X    |         |         |         |
 |immortal                           |         |    X    |         |         |         |
 |impaled                            |         |    X    |         |         |         |
-|in flames                          |         |    X    |         |         |         |
+|in flames                          |    X    |    X    |         |         |         |
 |in this moment                     |         |    X    |         |         |         |
 |incarnia                           |    X    |    X    |         |         |         |
 |insomnium                          |         |    X    |         |         |         |
@@ -185,7 +187,7 @@
 |katatonia                          |         |    X    |         |         |         |
 |kataklysm                          |         |    X    |         |         |         |
 |killswitch engage                  |         |    X    |         |         |         |
-|kiss                               |         |    X    |         |         |         |
+|kiss                               |    X    |    X    |         |         |         |
 |korn                               |    X    |    X    |         |         |         |
 |korpiklaani                        |    X    |    X    |         |         |         |
 |kreator                            |         |    X    |         |         |         |
@@ -195,10 +197,10 @@
 |lamb of god                        |         |    X    |         |         |         |
 |leaves eyes                        |         |    X    |         |         |         |
 |led zeppelin                       |         |    X    |         |         |         |
-|limp bizkit                        |         |    X    |         |         |         |
+|limp bizkit                        |    X    |    X    |         |         |         |
 |linkin park                        |    X    |    X    |         |         |         |
 |lionheart                          |         |    X    |         |         |         |
-|lostprophets                       |         |    X    |         |         |         |
+|lostprophets                       |    X    |    X    |         |         |         |
 |lordi                              |    X    |         |         |         |         |
 |lower than atlantis                |         |    X    |         |         |         |
 |machine head                       |    X    |    X    |         |         |         |
@@ -211,7 +213,7 @@
 |meshuggah                          |         |    X    |         |         |         |
 |metal church                       |         |    X    |         |         |         |
 |metallica                          |    X    |    X    |         |         |         |
-|michael jackson                    |         |    X    |         |         |         |
+|michael jackson                    |    X    |    X    |         |         |         |
 |miss may i                         |         |    X    |         |         |         |
 |morbid angel                       |         |    X    |         |         |         |
 |mors principium est                |         |    X    |         |         |         |
@@ -229,8 +231,8 @@
 |nemesea                            |         |    X    |         |         |         |
 |nightwish                          |    X    |    X    |         |         |         |
 |nile                               |         |    X    |         |         |         |
-|nine inch nails                    |         |    X    |         |         |         |
-|nirvana                            |         |    X    |         |         |         |
+|nine inch nails                    |    X    |    X    |         |         |         |
+|nirvana                            |    X    |    X    |         |         |         |
 |obituary                           |         |    X    |         |         |         |
 |obscura                            |         |    X    |         |         |         |
 |oceano                             |         |    X    |         |         |         |
@@ -240,7 +242,7 @@
 |oh, sleeper                        |    X    |    X    |         |         |         |
 |opeth                              |         |    X    |         |         |         |
 |overkill                           |         |    X    |         |         |         |
-|ozzy osbourne                      |         |    X    |         |         |         |
+|ozzy osbourne                      |    X    |    X    |         |         |         |
 |panic! at the disco                |    X    |    X    |         |         |         |
 |pantera                            |    X    |    X    |         |         |         |
 |paradise lost                      |         |    X    |         |         |         |
@@ -251,16 +253,16 @@
 |pink floyd                         |    X    |    X    |         |         |         |
 |posmortem promises                 |         |    X    |         |         |         |
 |powerflo                           |    X    |         |         |         |         |
-|powerwolf                          |         |    X    |         |         |         |
+|powerwolf                          |    X    |    X    |         |         |         |
 |premonitions of war                |         |    X    |         |         |         |
 |psycroptic                         |         |    X    |         |         |         |
-|queen                              |         |    X    |         |         |         |
+|queen                              |    X    |    X    |         |         |         |
 |queens of the stone age            |         |    X    |         |         |         |
 |queensryche                        |         |    X    |         |         |         |
-|rage against the machine           |         |    X    |         |         |         |
+|rage against the machine           |    X    |    X    |         |         |         |
 |ragnarok                           |         |    X    |         |         |         |
 |rammstein                          |    X    |    X    |         |         |         |
-|red hot chilli peppers             |         |    X    |         |         |         |
+|red hot chilli peppers             |    X    |    X    |         |         |         |
 |red queen                          |         |    X    |         |         |         |
 |reign of fury                      |         |    X    |         |         |         |
 |rhapsody of fire                   |         |    X    |         |         |         |
@@ -272,7 +274,7 @@
 |rotting christ                     |         |    X    |         |         |         |
 |rush                               |         |    X    |         |         |         |
 |sabaton                            |    X    |    X    |         |         |         |
-|saosin                             |         |    X    |         |         |         |
+|saosin                             |    X    |    X    |         |         |         |
 |sarke                              |         |    X    |         |         |         |
 |scar symmetry                      |         |    X    |         |         |         |
 |scar the martyr                    |         |    X    |         |         |         |
@@ -308,7 +310,7 @@
 |stick to your guns                 |         |    X    |         |         |         |
 |still remains                      |         |    X    |         |         |         |
 |stitched up heart                  |         |    X    |         |         |         |
-|stone sour                         |         |    X    |         |         |         |
+|stone sour                         |    X    |    X    |         |         |         |
 |stratovarius                       |         |    X    |         |         |         |
 |styles of beyond                   |         |    X    |         |         |         |
 |suffocation                        |         |    X    |         |         |         |
@@ -319,17 +321,17 @@
 |symphony in peril                  |         |    X    |         |         |         |
 |symphony x                         |         |    X    |         |         |         |
 |system of a down                   |    X    |    X    |         |         |         |
-|tenacious d                        |         |    X    |         |         |         |
+|tenacious d                        |    X    |    X    |         |         |         |
 |testament                          |         |    X    |         |         |         |
 |textures                           |         |    X    |         |         |         |
 |the acacia strain                  |         |    X    |         |         |         |
 |the agonist                        |         |    X    |         |         |         |
-|the all-american rejects           |         |    X    |         |         |         |
-|the birthday massacre              |         |    X    |         |         |         |
-|the black dahlia murder            |         |    X    |         |         |         |
+|the all-american rejects           |    X    |    X    |         |         |         |
+|the birthday massacre              |    X    |    X    |         |         |         |
+|the black dahlia murder            |    X    |    X    |         |         |         |
 |the bled                           |         |    X    |         |         |         |
 |the cardigans                      |         |    X    |         |         |         |
-|the chemical brothers              |         |    X    |         |         |         |
+|the chemical brothers              |    X    |    X    |         |         |         |
 |the civil wars                     |         |    X    |         |         |         |
 |the darkness                       |         |    X    |         |         |         |
 |the doors                          |         |    X    |         |         |         |
@@ -337,7 +339,7 @@
 |the haunted                        |         |    X    |         |         |         |
 |the jam                            |         |    X    |         |         |         |
 |the last felony                    |         |    X    |         |         |         |
-|the lonely island                  |         |    X    |         |         |         |
+|the lonely island                  |    X    |    X    |         |         |         |
 |the modern age slavery             |         |    X    |         |         |         |
 |the night flight orchestra         |         |    X    |         |         |         |
 |the offspring                      |    X    |    X    |         |         |         |
@@ -372,7 +374,7 @@
 |winds of plague                    |         |    X    |         |         |         |
 |wintersun                          |         |    X    |         |         |         |
 |with blood comes cleansing         |         |    X    |         |         |         |
-|within temptation                  |         |    X    |         |         |         |
+|within temptation                  |    X    |    X    |         |         |         |
 |within the ruins                   |         |    X    |         |         |         |
 |wolfbrigade                        |         |    X    |         |         |         |
 |wolves at the gate                 |    X    |    X    |         |         |         |
