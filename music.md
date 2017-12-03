@@ -33,7 +33,7 @@
 |asking alexandria                  |         |    X    |         |         |         |
 |at the gates                       |         |    X    |         |         |         |
 |august burns red                   |    X    |    X    |         |         |         |
-|avantasia                          |         |    X    |         |         |         |
+|avantasia                          |    X    |    X    |         |         |         |
 |avenged sevenfold                  |    X    |    X    |         |         |         |
 |ayreon                             |         |    X    |         |         |         |
 |battle beast                       |    X    |         |         |         |         |
