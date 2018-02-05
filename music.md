@@ -19,7 +19,7 @@
 |all that remains                   |         |    X    |
 |alter bridge                       |         |    X    |
 |amaranthe                          |    X    |         |
-|amon amarth                        |         |    X    |
+|amon amarth                        |    X    |    X    |
 |amorphis                           |         |    X    |
 |amy winehouse                      |         |    X    |
 |animals as leaders                 |         |    X    |
@@ -27,10 +27,10 @@
 |anthrax                            |    X    |    X    |
 |apocalyptica                       |    X    |    X    |
 |arch enemy                         |    X    |    X    |
-|architects                         |         |    X    |
+|architects                         |    X    |    X    |
 |as blood runs black                |         |    X    |
-|as i lay dying                     |         |    X    |
-|asking alexandria                  |         |    X    |
+|as i lay dying                     |    X    |    X    |
+|asking alexandria                  |    X    |    X    |
 |at the gates                       |         |    X    |
 |august burns red                   |    X    |    X    |
 |avantasia                          |    X    |    X    |
@@ -93,7 +93,7 @@
 |despised icon                      |         |    X    |
 |destroyer 666                      |         |    X    |
 |devil you know                     |         |    X    |
-|devildriver                        |         |    X    |
+|devildriver                        |    X    |    X    |
 |diabulus in musica                 |         |    X    |
 |dimmu borgir                       |         |    X    |
 |disarmonia mundi                   |    X    |    X    |
@@ -122,7 +122,7 @@
 |eternal lord                       |         |    X    |
 |europe                             |         |    X    |
 |eurythmics                         |         |    X    |
-|evanescence                        |         |    X    |
+|evanescence                        |    X    |    X    |
 |evil nine                          |         |    X    |
 |evil scarecrow                     |    X    |    X    |
 |evile                              |         |    X    |
@@ -177,16 +177,16 @@
 |insomnium                          |         |    X    |
 |iron maiden                        |    X    |    X    |
 |james labrie                       |         |    X    |
-|jimi hendrix                       |         |    X    |
+|jimi hendrix                       |    X    |    X    |
 |jinjer                             |         |    X    |
 |journey                            |         |    X    |
 |judas priest                       |    X    |    X    |
 |kamelot                            |    X    |    X    |
-|kasabian                           |         |    X    |
+|kasabian                           |    X    |    X    |
 |kansas                             |    X    |         |
-|katatonia                          |         |    X    |
+|katatonia                          |    X    |    X    |
 |kataklysm                          |         |    X    |
-|killswitch engage                  |         |    X    |
+|killswitch engage                  |    X    |    X    |
 |kiss                               |    X    |    X    |
 |korn                               |    X    |    X    |
 |korpiklaani                        |    X    |    X    |
@@ -194,9 +194,9 @@
 |krisiun                            |         |    X    |
 |krypteria                          |         |    X    |
 |lacuna coil                        |         |    X    |
-|lamb of god                        |         |    X    |
+|lamb of god                        |    X    |    X    |
 |leaves eyes                        |         |    X    |
-|led zeppelin                       |         |    X    |
+|led zeppelin                       |    X    |    X    |
 |limp bizkit                        |    X    |    X    |
 |linkin park                        |    X    |    X    |
 |lionheart                          |         |    X    |
@@ -214,14 +214,14 @@
 |metal church                       |         |    X    |
 |metallica                          |    X    |    X    |
 |michael jackson                    |    X    |    X    |
-|miss may i                         |         |    X    |
+|miss may i                         |    X    |    X    |
 |morbid angel                       |         |    X    |
 |mors principium est                |         |    X    |
 |motionless in white                |         |    X    |
-|motorhead                          |         |    X    |
+|motorhead                          |    X    |    X    |
 |municipal waste                    |         |    X    |
 |muse                               |    X    |    X    |
-|mushroomhead                       |         |    X    |
+|mushroomhead                       |    X    |    X    |
 |my bitter end                      |         |    X    |
 |mychildren mybride                 |         |    X    |
 |narcotic wasteland                 |         |    X    |
@@ -246,7 +246,7 @@
 |panic! at the disco                |    X    |    X    |
 |pantera                            |    X    |    X    |
 |paradise lost                      |         |    X    |
-|parkway drive                      |         |    X    |
+|parkway drive                      |    X    |    X    |
 |pearl jam                          |         |    X    |
 |pentakill                          |         |    X    |
 |periphery                          |         |    X    |
@@ -344,7 +344,7 @@
 |the night flight orchestra         |         |    X    |
 |the offspring                      |    X    |    X    |
 |the red shore                      |         |    X    |
-|the rolling stones                 |         |    X    |
+|the rolling stones                 |    X    |    X    |
 |the unguided                       |    X    |    X    |
 |the who                            |         |    X    |
 |theatre of tragedy                 |    X    |    X    |
@@ -361,15 +361,15 @@
 |unearth                            |         |    X    |
 |unfold                             |         |    X    |
 |upon a burning body                |         |    X    |
-|van halen                          |         |    X    |
+|van halen                          |    X    |    X    |
 |veil of maya                       |    X    |    X    |
 |velvet revolver                    |         |    X    |
 |volbeat                            |         |    X    |
 |wage war                           |         |    X    |
 |war from a harlots mouth           |         |    X    |
 |warpaint                           |         |    X    |
-|we came as romans                  |         |    X    |
-|white striples                     |         |    X    |
+|we came as romans                  |    X    |    X    |
+|white striples                     |    X    |    X    |
 |whitechapel                        |         |    X    |
 |winds of plague                    |         |    X    |
 |wintersun                          |         |    X    |
