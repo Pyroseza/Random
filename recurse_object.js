@@ -13,13 +13,14 @@ var obj = {
   }
 };
 
-traverse = obj => {
+traverse = (obj, level=1) => {
   Object.keys(obj).forEach(function(key, idx) {
     objType = typeof obj[key];
     if (objType === typeof {} || objType === typeof []) {
-      traverse(obj[key]);
+      traverse(obj[key], ++level);
+      --level;
     } else {
-      window.document.write(typeof key + ' ' + key + ": " + typeof obj[key] + ' '+ obj[key] + '\n');
+      window.document.write('--'.repeat(level) + typeof key + ' ' + key + ": " + typeof obj[key] + ' '+ obj[key] + '<br />');
     }
   });
 
