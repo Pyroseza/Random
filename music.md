@@ -17,7 +17,7 @@
 |alice in chains                    |         |    X    |
 |all shall perish                   |         |    X    |
 |all that remains                   |         |    X    |
-|alter bridge                       |         |    X    |
+|alter bridge                       |    X    |    X    |
 |amaranthe                          |    X    |         |
 |amon amarth                        |    X    |    X    |
 |amorphis                           |         |    X    |
@@ -45,12 +45,14 @@
 |belphegor                          |         |    X    |
 |black label society                |         |    X    |
 |black sabbath                      |    X    |    X    |
+|black veil brides                  |    X    |    X    |
 |bleeding through                   |         |    X    |
 |bleed from within                  |         |    X    |
 |blind guardian                     |         |    X    |
 |blinded colony                     |         |    X    |
 |blink 182                          |    X    |    X    |
 |bloodbath                          |         |    X    |
+|bloodbound                         |    X    |         |
 |bon jovi                           |    X    |    X    |
 |born of osiris                     |         |    X    |
 |bring me the horizon               |    X    |    X    |
@@ -119,6 +121,7 @@
 |enslaved                           |         |    X    |
 |epica                              |    X    |    X    |
 |erra                               |         |    X    |
+|escape the fate                    |    X    |         |
 |eternal lord                       |         |    X    |
 |europe                             |         |    X    |
 |eurythmics                         |         |    X    |
@@ -129,6 +132,7 @@
 |ex deo                             |         |    X    |
 |exhumed                            |         |    X    |
 |fall out boy                       |    X    |         |
+|falling in reverse                 |    X    |         |
 |fallujah                           |         |    X    |
 |fear factory                       |         |    X    |
 |fleetwood mac                      |         |    X    |
@@ -176,6 +180,7 @@
 |incarnia                           |    X    |    X    |
 |insomnium                          |         |    X    |
 |iron maiden                        |    X    |    X    |
+|iron saviour                       |    X    |         |
 |james labrie                       |         |    X    |
 |jimi hendrix                       |    X    |    X    |
 |jinjer                             |         |    X    |
@@ -192,6 +197,7 @@
 |korpiklaani                        |    X    |    X    |
 |kreator                            |         |    X    |
 |krisiun                            |         |    X    |
+|krokus                             |    X    |         |
 |krypteria                          |         |    X    |
 |lacuna coil                        |         |    X    |
 |lamb of god                        |    X    |    X    |
@@ -255,6 +261,7 @@
 |powerflo                           |    X    |         |
 |powerwolf                          |    X    |    X    |
 |premonitions of war                |         |    X    |
+|primal fear                        |    X    |         |
 |psycroptic                         |         |    X    |
 |queen                              |    X    |    X    |
 |queens of the stone age            |         |    X    |
@@ -272,13 +279,13 @@
 |rise to fall                       |         |    X    |
 |rose funeral                       |         |    X    |
 |rotting christ                     |         |    X    |
-|rush                               |         |    X    |
+|rush                               |    X    |    X    |
 |sabaton                            |    X    |    X    |
 |saosin                             |    X    |    X    |
 |sarke                              |         |    X    |
 |scar symmetry                      |         |    X    |
 |scar the martyr                    |         |    X    |
-|scorpians                          |         |    X    |
+|scorpians                          |    X    |    X    |
 |september morning                  |         |    X    |
 |septic flesh                       |         |    X    |
 |serpentine dominion                |         |    X    |
