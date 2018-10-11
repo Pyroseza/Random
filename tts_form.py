@@ -23,38 +23,36 @@ menu_def = [['File', ['Open', 'Save', 'Exit', 'Properties']],
             ['Edit', ['Paste', ['Special', 'Normal', ], 'Undo'], ],
             ['Help', 'About...'], ]
 
-# ------ Column Definition ------ #
-column1 = [[sg.Text('Column 1', background_color='#F7F3EC', justification='center', size=(10, 1))],
-           [sg.Spin(values=('Spin Box 1', 'Spin Box 2', 'Spin Box 3'), initial_value='Spin Box 1')],
-           [sg.Spin(values=('Spin Box 1', 'Spin Box 2', 'Spin Box 3'), initial_value='Spin Box 2')],
-           [sg.Spin(values=('Spin Box 1', 'Spin Box 2', 'Spin Box 3'), initial_value='Spin Box 3')]]
-
 layout = [
-    [sg.Menu(menu_def, tearoff=True)],
-    [sg.Text('Google Cloud Text-to-Speech', size=(30, 1), justification='center', font=("Helvetica", 25), relief=sg.RELIEF_RIDGE), sg.RButton('API')],
-    [sg.Text('Text to speak:')],
+    #[sg.Menu(menu_def, tearoff=True)],
+    [sg.Text('Google Cloud Text-to-Speech', size=(35, 1), justification='center', font=("Helvetica", 25), relief=sg.RELIEF_RIDGE)],
+    [sg.Text('Text to speak:'),
+        sg.Frame(layout=[
+            [sg.Radio('text', "input_type", default=True),
+            sg.Radio('ssml', "input_type")]
+        ], title='Input text type', tooltip='Choose input text type'),
+        sg.Text(' '  * 60),
+        sg.RButton('Google API', key='API', size=(12,2))],
     [sg.Multiline(default_text='Google Cloud Text-to-Speech enables developers to synthesize natural-sounding speech with 32 voices, ' + \
                                 'available in multiple languages and variants. It applies DeepMind’s groundbreaking research in WaveNet and ' + \
                                 'Google’s powerful neural networks to deliver the highest fidelity possible. As an easy-to-use API, ' + \
-                                'you can create lifelike interactions with your users, across many applications and devices.', key='input',size=(80, 10))],
-    [sg.Frame(layout=[
-    [sg.Radio('text', "input_type", default=True, size=(10,1)), 
-    sg.Radio('ssml', "input_type")]], title='Input text type', relief=sg.RELIEF_SUNKEN, tooltip='Choose input text type ')],    
-    [sg.InputCombo(['English', 'Afrikaans'], size=(20, 1)),
-     sg.Slider(range=(1, 100), orientation='h', size=(34, 20), default_value=85)],
-    [sg.InputOptionMenu(('Menu Option 1', 'Menu Option 2', 'Menu Option 3'))],
-    [sg.Listbox(values=('Listbox 1', 'Listbox 2', 'Listbox 3'), size=(30, 3)),
-     sg.Frame('Labelled Group',[[
-     sg.Slider(range=(1, 100), orientation='v', size=(5, 20), default_value=25),
-     sg.Slider(range=(1, 100), orientation='v', size=(5, 20), default_value=75),
-     sg.Slider(range=(1, 100), orientation='v', size=(5, 20), default_value=10),
-     sg.Column(column1, background_color='#F7F3EC')]])],
-    [sg.Text('_'  * 80)],
-    [sg.Text('Choose A File', size=(35, 1))],
-    [sg.Text('Audio Output:', size=(10, 1), auto_size_text=False),
-     sg.InputText('output.mp3', key='output',size=(60, 1)), 
+                                'you can create lifelike interactions with your users, across many applications and devices.', key='input',size=(90, 15)),
+    ],
+    [sg.Text('Language / locale', size=(20, 1)),
+        sg.Text('Voice type', size=(20, 1)),
+        sg.Text('Voice name', size=(20, 1)),
+        sg.Text('Audio device profile', size=(20, 1))],
+    [sg.InputCombo(['English', 'German', 'French', 'Dutch'], key='language_locale',size=(20, 1)),
+        sg.InputCombo(['Basic', 'WaveNet'], key='voice_type', size=(20, 1)),
+        sg.InputCombo(['Standard A', 'Standard B', 'Wave A', 'Wave B'], key='voice_name', size=(20, 1)),
+        sg.InputCombo(['Default', 'Smartphone', 'Headphones or earbuds'], key='device_profile', size=(20, 1))],        
+    [sg.Frame(layout=[[sg.Slider(range=(25, 400), orientation='h', size=(25, 20), default_value=100)]], title='Speed'),
+        sg.Frame(layout=[[sg.Slider(range=(-20, 20), orientation='h', size=(25, 20), default_value=0)]], title='Pitch')],
+    [sg.Text('_'  * 95)],
+    [sg.Text('Choose a filename to save output as:', size=(35, 1))],
+    [sg.InputText(os.path.join(os.getcwd(),'output.mp3'), key='output',size=(80, 1)), 
      sg.SaveAs(target='output',file_types=(("MP3 Files", "*.mp3"),))],
-    [sg.RButton('TTS',tooltip='Click to read the window'), sg.Exit()]
+    [sg.RButton('TTS',tooltip='Click to synthesize', size=(50,2)), sg.Text(' '  * 32), sg.Exit(size=(10, 2))]
 ]
 
 window = sg.Window('Google Cloud Text-to-Speech', default_element_size=(40, 1), grab_anywhere=False).Layout(layout)
