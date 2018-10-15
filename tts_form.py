@@ -4,6 +4,8 @@ import random
 import time
 import webbrowser
 
+from google.cloud import texttospeech_v1
+
 colours = ['GreenTan', 
             'LightGreen',
             'BluePurple',
@@ -70,6 +72,11 @@ while True:
              'The results of the window.',
              'The button clicked was "{}"'.format(button),
              'The values are', values)
+
+        client = texttospeech_v1.TextToSpeechClient()
+        response = client.list_voices()
+        print(response)
+
     elif button is not None:
         print(button, values)
     # add a small sleep so the form can keep checking for updates
