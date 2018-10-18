@@ -1,10 +1,57 @@
+#!/bin/env python
 import os
 import PySimpleGUI as sg
 import random
 import time
 import webbrowser
+import google.cloud as gc
+from google.cloud import texttospeech
+import babel
 
-from google.cloud import texttospeech_v1
+# set OS ENV var for the Google authentication token 
+os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = r'C:\secure\auth.json'
+
+locales = {}
+languages = []
+genders = []
+names = {}
+
+sg.PopupAutoClose("Retrieving data from Google", no_titlebar=True, auto_close_duration=2)
+client = texttospeech.TextToSpeechClient()
+
+# for e in gc.texttospeech.enums.SsmlVoiceGender:
+#     print(e)
+
+voices = client.list_voices()
+
+for voice in voices.voices:
+    # Display the voice's name. Example: tpc-vocoded
+    print('Name: {}'.format(voice.name), flush=True)
+
+    # Display the supported language codes for this voice. Example: "en-US"
+    for language_code in voice.language_codes:
+        # convert language code to babel friendly code. Example: "en_US"
+        locale_code = babel.Locale.parse(language_code.replace('-','_'))
+        # check if it exists in the dict or else add it
+        if locale_code not in locales:
+            locales[locale_code] = locale_code.get_display_name('en')
+        print('Supported language: {} -> {}'.format(language_code, locales[locale_code]))
+
+    # SSML Voice Gender values from google.cloud.texttospeech.enums
+    ssml_voice_genders = ['SSML_VOICE_GENDER_UNSPECIFIED', 'MALE',
+                        'FEMALE', 'NEUTRAL']
+    # Display the SSML Voice Gender
+    print('SSML Voice Gender: {}'.format(
+        ssml_voice_genders[voice.ssml_gender]))
+
+    # Display the natural sample rate hertz for this voice. Example: 24000
+    print('Natural Sample Rate Hertz: {}\n'.format(
+    voice.natural_sample_rate_hertz))
+
+for key in locales:
+    if locales[key] not in languages:
+        languages.append(locales[key])
+languages.sort()
 
 colours = ['GreenTan', 
             'LightGreen',
@@ -44,7 +91,7 @@ layout = [
         sg.Text('Voice type', size=(20, 1)),
         sg.Text('Voice name', size=(20, 1)),
         sg.Text('Audio device profile', size=(20, 1))],
-    [sg.InputCombo(['English', 'German', 'French', 'Dutch'], key='language_locale',size=(20, 1)),
+    [sg.InputCombo(languages, key='language_locale',size=(20, 1)),
         sg.InputCombo(['Basic', 'WaveNet'], key='voice_type', size=(20, 1)),
         sg.InputCombo(['Standard A', 'Standard B', 'Wave A', 'Wave B'], key='voice_name', size=(20, 1)),
         sg.InputCombo(['Default', 'Smartphone', 'Headphones or earbuds'], key='device_profile', size=(20, 1))],        
@@ -72,10 +119,6 @@ while True:
              'The results of the window.',
              'The button clicked was "{}"'.format(button),
              'The values are', values)
-
-        client = texttospeech_v1.TextToSpeechClient()
-        response = client.list_voices()
-        print(response)
 
     elif button is not None:
         print(button, values)
