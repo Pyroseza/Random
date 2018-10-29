@@ -117,7 +117,7 @@ class google_tts():
         # - voice type (within each language there are types which can be various options of gender)        
         for voice in self.api_voices.voices:
             # grab the voice's name. e.g.: en-GB-Standard-A
-            self.debug_print('Name: {}'.format(voice.name))
+            self.debug_print('{}-{}'.format(voice.name, texttospeech.enums.SsmlVoiceGender(voice.ssml_gender).name))
             # languages is a list but only 1 item
             # grab language code and convert to a display friendly language name
             # Example: "en-GB" -> "English (United Kingdom)"
@@ -134,19 +134,18 @@ class google_tts():
                 # add it to languages as well
                 if self.locales[language_code] not in self.languages:
                     self.languages.append(self.locales[language_code])
-            self.debug_print('Supported language: {} -> {}'.format(language_code, self.locales[language_code]))
+            #self.debug_print('Supported language: {} -> {}'.format(language_code, self.locales[language_code]))
             # determine the voice type e.g. Wavenet or Standard
             if 'wavenet' in voice.name.lower():
                 self.voice_tree[language_code].add_voice_type('Wavenet')
             else:
                 self.voice_tree[language_code].add_voice_type('Standard')
-
             # Retrieve the Voice Gender
-            self.debug_print('Voice Gender: {} = {}'.format(
-                voice.ssml_gender, texttospeech.enums.SsmlVoiceGender(voice.ssml_gender).name))
-            # Display the natural sample rate hertz for this voice. Example: 24000
-            self.debug_print('Natural Sample Rate Hertz: {}\n'.format(
-            voice.natural_sample_rate_hertz))
+            # self.debug_print('Voice Gender: {} = {}'.format(
+            #     voice.ssml_gender, texttospeech.enums.SsmlVoiceGender(voice.ssml_gender).name))
+            # # Display the natural sample rate hertz for this voice. Example: 24000
+            # self.debug_print('Natural Sample Rate Hertz: {}\n'.format(
+            # voice.natural_sample_rate_hertz))
         # sort language list
         self.languages.sort()
 
@@ -177,7 +176,7 @@ class google_tts():
                     #    'The values are', values)
                     self.synth_text(values)
                 elif button == 'Debug':
-                    # retrieve locale from language chosen
+                    # retrieve locale code from chosen language
                     for key in self.locales:
                         if values['language'] == self.locales[key]:
                             self.debug_print("Language / local: {} = {}".format(values['language'], key))
