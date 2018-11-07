@@ -45,6 +45,10 @@ class google_tts():
             'SandyBeach',
             'TealMono']
         self.debug = True
+        self.selected_options = {}
+        self.selected_options['language_locale'] = ''
+        self.selected_options['voice_type'] = ''
+        self.selected_options['voice_option'] = ''
 
     def debug_print(self, *args):
         if self.debug:
@@ -88,8 +92,8 @@ class google_tts():
             [sg.Text('Language / locale', size=(27, 1)),
                 sg.Text('Voice type', size=(27, 1)),
                 sg.Text('Voice option / gender', size=(27, 1))],
-            [sg.InputCombo(self.languages, key='language',size=(27, 1)),
-                sg.InputCombo(['Basic', 'WaveNet'], key='voice_type', size=(27, 1)),
+            [sg.InputCombo(self.languages, key='language_locale',size=(27, 1),change_submits=True),
+                sg.InputCombo(['Basic', 'WaveNet'], key='voice_type', size=(27, 1), change_submits=True),
                 sg.InputCombo(['A - FEMALE', 'B - MALE', 'C - FEMALE', 'D - MALE'], key='voice_option', size=(27, 1))],      
             [sg.Frame(layout=[[sg.Slider(range=(25, 400), key="speed", orientation='h', size=(25, 20), default_value=100)]], title='Speed'),
                 sg.Frame(layout=[[sg.Slider(range=(-20, 20), key="pitch", orientation='h', size=(25, 20), default_value=0)]], title='Pitch')],
@@ -114,7 +118,7 @@ class google_tts():
         # loop through each voice and identify the following:
         # - locale code
         # - language (used only in disply, backwards link to locale code)
-        # - voice type (within each language there are types which can be various options of gender)        
+        # - voice type (within each language there are types which can be various options of gender)
         for voice in self.api_voices.voices:
             # grab the voice's name. e.g.: en-GB-Standard-A
             self.debug_print('{}-{}'.format(voice.name, texttospeech.enums.SsmlVoiceGender(voice.ssml_gender).name))
@@ -148,7 +152,10 @@ class google_tts():
             # voice.natural_sample_rate_hertz))
         # sort language list
         self.languages.sort()
-
+        # TODO - set the default selected options
+        self.selected_options['language_locale'] = ''
+        self.selected_options['voice_type'] = ''
+        self.selected_options['voice_option'] = ''
 
     def main(self):
         # set a random look and feel to spice things up
@@ -165,32 +172,29 @@ class google_tts():
         try:
             # enter an indefinte loop to keep the form open and the user can interact with it, we can then check the button presses
             while True:
-                button, values = window.ReadNonBlocking()
+                event, values = window.Read(timeout=100)
                 # check which button was clicked
-                if button == 'Exit':
+                if event == 'Exit':
                     break
-                elif button == 'API':
+                elif event == 'API':
                     webbrowser.open('https://cloud.google.com/text-to-speech/')
-                elif button == 'TTS':
-                    #sg.Popup('The button clicked was "{}"'.format(button),
+                elif event == 'TTS':
+                    #sg.Popup('The event that was triggered was "{}"'.format(event),
                     #    'The values are', values)
                     self.synth_text(values)
-                elif button == 'Debug':
+                elif event == 'Debug':
                     # retrieve locale code from chosen language
                     for key in self.locales:
-                        if values['language'] == self.locales[key]:
-                            self.debug_print("Language / local: {} = {}".format(values['language'], key))
+                        if values['language_locale'] == self.locales[key]:
+                            self.debug_print("Language / local: {} = {}".format(values['language_locale'], key))
                             break
                     # we should now have the locale code, list the available voices
                     #for voice in self.api_voices.voices:
-                        
-                elif button is not None:
-                    self.debug_print(button, values)
+                elif event is not None and event is not sg.TIMEOUT_KEY:
+                    self.debug_print(event, values)
                 # if for some reason there is nothing on the form
                 if values is None:
                     break
-                # add a small sleep so the form can keep checking for updates
-                time.sleep(.1)
         except Exception as e:
             sg.PopupError('Unexpected error occurred: "{}"'.format(e), no_titlebar=True)
         finally:
