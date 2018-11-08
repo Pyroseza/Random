@@ -8,27 +8,7 @@ import google.cloud as gc
 from google.cloud import texttospeech
 import babel
 
-class voice_branch():
-    def __init__(self, name):
-        self.name = name
-        self.voice_types = []
-        self.genders = []
-        self.options = []
-
-    def add_gender(self, gender):
-        if gender not in self.gender:
-            self.gender.append(gender)
-
-    def add_voice_type(self, voice_type):
-        if voice_type not in self.voice_types:
-            self.voice_types.append(voice_type)
-
-    def add_options(self, option):
-        if option not in self.options:
-            self.options.append(option)
-
 class google_tts():
-
     def __init__(self):
         # set OS ENV var for the Google authentication token 
         os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = r'C:\secure\auth.json'
@@ -58,11 +38,28 @@ class google_tts():
                 print(args, flush=True)
 
     def synth_text(self, values):
+        locale_code = self.convert_lang_to_locale(values['language_locale'])
+        voice_type = values['voice_type']
+        voice_option = values['voice_option'].split('-')
+        voice_name='{}-{}-{}'.format(locale_code,voice_type,voice_option[0])
         input_text = texttospeech.types.SynthesisInput(text=values['input_text'])
+        for gender in texttospeech.enums.SsmlVoiceGender:
+            if gender.name == voice_option[1]:
+                ssml_gender = gender
+                break
+        self.debug_print('language_locale:', locale_code)
+        self.debug_print('voice_type:', voice_type)
+        self.debug_print('voice_option:', voice_option)
+        self.debug_print('voice_name:', voice_name)
+        self.debug_print('ssml_gender:', ssml_gender)
+
         voice = texttospeech.types.VoiceSelectionParams(
-            language_code='en-GB',
-            name='en-GB-Wavenet-B',
-            ssml_gender=texttospeech.enums.SsmlVoiceGender.MALE)
+            #language_code='en-GB',
+            language_code=locale_code,
+            #name='en-GB-Wavenet-B',
+            name=voice_name,
+            #ssml_gender=texttospeech.enums.SsmlVoiceGender.MALE)
+            ssml_gender=ssml_gender)
         audio_config = texttospeech.types.AudioConfig(
             audio_encoding=texttospeech.enums.AudioEncoding.MP3,
             speaking_rate=(values['speed']/100.0),
@@ -87,19 +84,19 @@ class google_tts():
             [sg.Multiline(default_text='Google Cloud Text-to-Speech enables developers to synthesize natural-sounding speech with 32 voices, ' + \
                                         'available in multiple languages and variants. It applies DeepMind’s groundbreaking research in WaveNet and ' + \
                                         'Google’s powerful neural networks to deliver the highest fidelity possible. As an easy-to-use API, ' + \
-                                        'you can create lifelike interactions with your users, across many applications and devices.', key='input_text',size=(90, 15)),
+                                        'you can create lifelike interactions with your users, across many applications and devices.', key='input_text', size=(90, 15), do_not_clear=True),
             ],
             [sg.Text('Language / locale', size=(27, 1)),
                 sg.Text('Voice type', size=(27, 1)),
                 sg.Text('Voice option / gender', size=(27, 1))],
             [sg.InputCombo(self.languages, key='language_locale',size=(27, 1),change_submits=True),
-                sg.InputCombo(['Basic', 'WaveNet'], key='voice_type', size=(27, 1), change_submits=True),
-                sg.InputCombo(['A - FEMALE', 'B - MALE', 'C - FEMALE', 'D - MALE'], key='voice_option', size=(27, 1))],      
+                sg.InputCombo(['--choose locale--'], key='voice_type', size=(27, 1), change_submits=True),
+                sg.InputCombo(['--choose voice type--'], key='voice_option', size=(27, 1))],      
             [sg.Frame(layout=[[sg.Slider(range=(25, 400), key="speed", orientation='h', size=(25, 20), default_value=100)]], title='Speed'),
                 sg.Frame(layout=[[sg.Slider(range=(-20, 20), key="pitch", orientation='h', size=(25, 20), default_value=0)]], title='Pitch')],
             [sg.Text('_'  * 95)],
             [sg.Text('Choose a filename to save output as:', size=(35, 1))],
-            [sg.InputText(os.path.join(os.getcwd(),'output.mp3'), key='output',size=(80, 1)), 
+            [sg.InputText(os.path.join(os.getcwd(),'output.mp3'), key='output',size=(80, 1), do_not_clear=True), 
             sg.SaveAs(target='output',file_types=(("MP3 Files", "*.mp3"),))],
             [sg.RButton('TTS',tooltip='Click to synthesize', size=(50,2)), sg.Text(' '  * 30), sg.Exit(size=(10, 2))],
             [sg.RButton('Debug',tooltip='Check values', size=(50,2))]
@@ -112,7 +109,7 @@ class google_tts():
         self.languages = []
         # create a tree of the languages and the options used for the GUI, 
         # i.e. list of keys (locales) that links to a list of available voice types, genders and multiple options for that voice type
-        self.voice_tree = {}
+        self.voice_list = []
         # API call to get full list of supported voices
         self.api_voices = self.client.list_voices()
         # loop through each voice and identify the following:
@@ -120,42 +117,77 @@ class google_tts():
         # - language (used only in disply, backwards link to locale code)
         # - voice type (within each language there are types which can be various options of gender)
         for voice in self.api_voices.voices:
-            # grab the voice's name. e.g.: en-GB-Standard-A
-            self.debug_print('{}-{}'.format(voice.name, texttospeech.enums.SsmlVoiceGender(voice.ssml_gender).name))
-            # languages is a list but only 1 item
-            # grab language code and convert to a display friendly language name
-            # Example: "en-GB" -> "English (United Kingdom)"
+            # grab the voice's name. e.g.: en-GB-Standard-A and add the gender to the option Male = en-GB-Standard-A-Male
+            voice_formatted = '{}-{}'.format(voice.name, texttospeech.enums.SsmlVoiceGender(voice.ssml_gender).name)
+            self.debug_print(voice_formatted)
+            self.voice_list.append(voice_formatted)
+            # languages is a list but only 1 item that I can see
             language_code = voice.language_codes[0]
-            # check if it exists in our voice tree, if not add it
-            if language_code not in self.voice_tree:
-                self.voice_tree[language_code] = voice_branch(voice.name)
-            # convert language code to babel friendly code. Example: "en_GB" = "en-GB"
+            # convert language code to babel friendly code. Example: "en-GB" => "en_GB"
             babel_locale_code = babel.Locale.parse(language_code.replace('-','_'))
-            # check if it exists in the dict or else add it in its original form e.g. en-US
+            # check if it exists in the dict or else add it in its original form e.g. en-GB
             if language_code not in self.locales:
                 # store the key as its original form not babels form
+                # grab language code and convert to a display friendly language name
+                # store this as the value, example: "en-GB" -> "English (United Kingdom)"
                 self.locales[language_code] = babel_locale_code.get_display_name('en')
-                # add it to languages as well
+                # add it to languages as well, used in the GUI
                 if self.locales[language_code] not in self.languages:
                     self.languages.append(self.locales[language_code])
-            #self.debug_print('Supported language: {} -> {}'.format(language_code, self.locales[language_code]))
-            # determine the voice type e.g. Wavenet or Standard
-            if 'wavenet' in voice.name.lower():
-                self.voice_tree[language_code].add_voice_type('Wavenet')
-            else:
-                self.voice_tree[language_code].add_voice_type('Standard')
-            # Retrieve the Voice Gender
-            # self.debug_print('Voice Gender: {} = {}'.format(
-            #     voice.ssml_gender, texttospeech.enums.SsmlVoiceGender(voice.ssml_gender).name))
-            # # Display the natural sample rate hertz for this voice. Example: 24000
-            # self.debug_print('Natural Sample Rate Hertz: {}\n'.format(
-            # voice.natural_sample_rate_hertz))
         # sort language list
         self.languages.sort()
         # TODO - set the default selected options
-        self.selected_options['language_locale'] = ''
-        self.selected_options['voice_type'] = ''
-        self.selected_options['voice_option'] = ''
+        self.selected_options['language_locale'] = 'en-GB'
+        self.selected_options['voice_type'] = 'Wavenet'
+        self.selected_options['voice_option'] = 'B-MALE'
+
+    def convert_lang_to_locale(self,language_code):
+        locale_code = ''
+        for key in self.locales:
+            if language_code == self.locales[key]:
+                self.debug_print("Language / local: {} = {}".format(language_code, key))
+                locale_code = key
+                break
+        return locale_code
+
+    def get_voice_types(self, language_code):
+        # convert chosen language to locale code
+        locale_code = ''
+        voice_types = []
+        self.selected_options['language_locale'] = self.convert_lang_to_locale(language_code)
+        if self.selected_options['language_locale'] is not '':
+            # we have a locale code
+            # now get get a list of voice types
+            for voice in self.voice_list:
+                if self.selected_options['language_locale'] in voice:
+                    # strip the locale code and voice option from the list
+                    # en-GB-Standard-A-Male => Standard
+                    voice_split = voice.split('-')
+                    voice_type = voice_split[2]
+                    if voice_type not in voice_types:
+                        voice_types.append(voice_type)
+        else:
+            return ['--choose locale--']
+        self.selected_options['voice_type'] = voice_types[0]
+        return voice_types
+
+    def get_voice_options(self, voice_type=''):
+        if voice_type is '':
+            voice_type = self.selected_options['voice_type']
+        else:
+            self.selected_options['voice_type'] = voice_type
+        voice_options = []
+        for voice in self.voice_list:
+            if self.selected_options['language_locale'] in voice:
+                if self.selected_options['voice_type'] in voice:
+                    # strip the locale code and voice type from the list
+                    # en-GB-Standard-A-Male => A-Male
+                    voice_split = voice.split('-')
+                    voice_option = '{}-{}'.format(voice_split[3], voice_split[4])
+                    if voice_option not in voice_options:
+                        voice_options.append(voice_option)
+        self.selected_options['voice_option'] = voice_options[0]
+        return voice_options
 
     def main(self):
         # set a random look and feel to spice things up
@@ -168,7 +200,7 @@ class google_tts():
         self.unpack_api_data()
         # design and open our window and show all the options to the user
         self.set_form_layout()
-        window = sg.Window('Google Cloud Text-to-Speech', default_element_size=(40, 1), grab_anywhere=False).Layout(self.layout)
+        window = sg.Window('Google Cloud Text-to-Speech', default_element_size=(40, 1), grab_anywhere=False).Layout(self.layout)                
         try:
             # enter an indefinte loop to keep the form open and the user can interact with it, we can then check the button presses
             while True:
@@ -179,17 +211,20 @@ class google_tts():
                 elif event == 'API':
                     webbrowser.open('https://cloud.google.com/text-to-speech/')
                 elif event == 'TTS':
-                    #sg.Popup('The event that was triggered was "{}"'.format(event),
-                    #    'The values are', values)
+                    #sg.Popup('The event that was triggered was "{}"'.format(event), 'The values are', values)
                     self.synth_text(values)
                 elif event == 'Debug':
-                    # retrieve locale code from chosen language
-                    for key in self.locales:
-                        if values['language_locale'] == self.locales[key]:
-                            self.debug_print("Language / local: {} = {}".format(values['language_locale'], key))
-                            break
-                    # we should now have the locale code, list the available voices
-                    #for voice in self.api_voices.voices:
+                    self.debug_print(event, values)
+                elif event == 'language_locale':
+                    self.debug_print(event, values)
+                    voice_types = self.get_voice_types(values['language_locale'])
+                    window.FindElement('voice_type').Update(values=voice_types)
+                    voice_options = self.get_voice_options()
+                    window.FindElement('voice_option').Update(values=voice_options)
+                elif event == 'voice_type':
+                    self.debug_print(event, values)
+                    voice_options = self.get_voice_options(values['voice_type'])
+                    window.FindElement('voice_option').Update(values=voice_options)
                 elif event is not None and event is not sg.TIMEOUT_KEY:
                     self.debug_print(event, values)
                 # if for some reason there is nothing on the form
