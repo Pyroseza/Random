@@ -8,12 +8,11 @@ import sys, traceback
 from google.cloud import texttospeech
 import PySimpleGUI as sg
 import babel
-#from playsound import playsound
 
 class google_tts():
     def __init__(self):
         # set OS ENV var for the Google authentication token
-        if os.environ['GOOGLE_APPLICATION_CREDENTIALS'] is not '':
+        if os.environ.get('GOOGLE_APPLICATION_CREDENTIALS') is None:
             os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = r'C:\secure\auth.json'
         self.debug = True
         self.selected_options = {}
@@ -32,12 +31,15 @@ class google_tts():
             except:
                 print(args, flush=True)
 
-    def synth_text(self, values):
+    def synthesize(self, values):
         locale_code = self.convert_lang_to_locale(values['language_locale'])
         voice_type = values['voice_type']
         voice_option = values['voice_option'].split('-')
         voice_name='{}-{}-{}'.format(locale_code,voice_type,voice_option[0])
-        input_text = texttospeech.types.SynthesisInput(text=values['input_text'])
+        if values['input_type_text'] == True:
+            input_text = texttospeech.types.SynthesisInput(text=values['input'])
+        elif values['input_type_ssml'] == True:
+            input_text = texttospeech.types.SynthesisInput(ssml=values['input'])
         for gender in texttospeech.enums.SsmlVoiceGender:
             if gender.name == voice_option[1]:
                 ssml_gender = gender
@@ -68,27 +70,27 @@ class google_tts():
 
     def set_form_layout(self):
         self.layout = [
-            [sg.Text('Google Cloud Text-to-Speech', size=(35, 1), justification='center', font=("Helvetica", 25), relief=sg.RELIEF_RIDGE)],
+            [sg.Text('Google Cloud Text-to-Speech', size=(35, 1), justification='center', font=('Helvetica', 25), relief=sg.RELIEF_RIDGE)],
             [sg.Frame(layout=[
-                [sg.Radio('text', "input_type", default=True),
-                sg.Radio('ssml', "input_type")]
-            ], title='Input text type', tooltip='Choose input text type'),
+                [sg.Radio('text', 'input_type', key='input_type_text', default=True),
+                sg.Radio('ssml', 'input_type', key='input_type_ssml')]
+            ], title='Input type', tooltip='Choose input type'),
             sg.Text(' '  * 100),
             sg.RButton('Google API', key='API', size=(12,2))],
-            [sg.Multiline(default_text=self.default_text, key='input_text', size=(100, 15), do_not_clear=True),
+            [sg.Multiline(default_text=self.default_text, key='input', size=(100, 15), do_not_clear=True),
             ],
             [sg.Text('Language / locale', size=(27, 1)),
                 sg.Text('Voice type', size=(27, 1)),
                 sg.Text('Voice option / gender', size=(27, 1))],
-            [sg.InputCombo(self.languages, key='language_locale',size=(27, 1),change_submits=True,readonly=True),
+            [sg.InputCombo(self.languages, key='language_locale',size=(27, 1),change_submits=True, readonly=True),
                 sg.InputCombo(['--choose locale--'], key='voice_type', size=(27, 1), change_submits=True, readonly=True),
                 sg.InputCombo(['--choose voice type--'], key='voice_option', size=(27, 1), readonly=True)],
-            [sg.Frame(layout=[[sg.Slider(range=(25, 400), key="speed", orientation='h', size=(25, 20), default_value=100)]], title='Speed'),
-                sg.Frame(layout=[[sg.Slider(range=(-20, 20), key="pitch", orientation='h', size=(25, 20), default_value=0)]], title='Pitch')],
+            [sg.Frame(layout=[[sg.Slider(range=(25, 400), key='speed', orientation='h', size=(25, 20), default_value=100)]], title='Speed'),
+                sg.Frame(layout=[[sg.Slider(range=(-20, 20), key='pitch', orientation='h', size=(25, 20), default_value=0)]], title='Pitch')],
             [sg.Text('_'  * 95)],
             [sg.Text('Choose a filename to save output as:', size=(35, 1))],
             [sg.InputText(os.path.join(os.getcwd(),'output.mp3'), key='output',size=(90, 1), do_not_clear=True), 
-            sg.FileSaveAs(target='output', file_types=(("MP3 Files", "*.mp3"),))],
+            sg.FileSaveAs(target='output', file_types=(('MP3 Files', '*.mp3'),))],
             [sg.RButton('Synthesize', tooltip='Click to synthesize', size=(18,2)),
             sg.RButton('Play', tooltip='Click to play', size=(18,2)),
             sg.RButton('Open', tooltip='Click to open output location', size=(18,2)),
@@ -123,13 +125,13 @@ class google_tts():
                     'you can create lifelike interactions with your users, across many applications and devices.'
             # languages is a list but only 1 item that I can see
             language_code = voice.language_codes[0]
-            # convert language code to babel friendly code. Example: "en-GB" => "en_GB"
+            # convert language code to babel friendly code. Example: 'en-GB' => 'en_GB'
             babel_locale_code = babel.Locale.parse(language_code.replace('-','_'))
             # check if it exists in the dict or else add it in its original form e.g. en-GB
             if language_code not in self.locales:
                 # store the key as its original form not babels form
                 # grab language code and convert to a display friendly language name
-                # store this as the value, example: "en-GB" -> "English (United Kingdom)"
+                # store this as the value, example: 'en-GB' -> 'English (United Kingdom)'
                 self.locales[language_code] = babel_locale_code.get_display_name('en')
                 # add it to languages as well, used in the GUI
                 if self.locales[language_code] not in self.languages:
@@ -141,7 +143,7 @@ class google_tts():
         locale_code = ''
         for key in self.locales:
             if language_code == self.locales[key]:
-                self.debug_print("Language / local: {} = {}".format(language_code, key))
+                self.debug_print('Language / local: {} = {}'.format(language_code, key))
                 locale_code = key
                 break
         return locale_code
@@ -227,7 +229,7 @@ class google_tts():
            text_color=colours[3],
            button_color=('white', colours[1]))
         # inform the user that the data is being retrieved from Google
-        sg.PopupAutoClose("Retrieving data from Google", no_titlebar=True, auto_close_duration=2, button_type=sg.POPUP_BUTTONS_NO_BUTTONS)
+        sg.PopupAutoClose('Retrieving data from Google', no_titlebar=True, auto_close_duration=2, button_type=sg.POPUP_BUTTONS_NO_BUTTONS)
         # make the Google API call to create the client
         self.client = texttospeech.TextToSpeechClient()
         # retrieve and unpack the data from the client
@@ -276,12 +278,11 @@ class google_tts():
                         webbrowser.open(values['output'])
                     except Exception as e:
                         sg.Popup('An error occurred trying to play the file at location: "{}"\n{}'.format(values['output'], e))
-                        #sg.Popup('Please synthesize the text first so that it outputs to the location: "{}"'.format(values['output']))
                 elif event == 'Synthesize':
                     try:
-                        self.synth_text(values)
+                        self.synthesize(values)
                     except Exception as e:
-                        sg.Popup('Unable to synthesize input text: "{}"'.format(e))
+                        sg.Popup('Unable to synthesize input: "{}"'.format(e))
                 if event is sg.TIMEOUT_KEY:
                     update = False
                     # fix some things on the form
