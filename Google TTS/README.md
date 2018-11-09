@@ -8,7 +8,7 @@
 ```
 04. Place the JSON file containing the Google API Authentication in an easy to find location and then create a local environment variable called `GOOGLE_APPLICATION_CREDENTIALS` and set it to the location of the file.
 ```
-    set PATH=%PATH%;C:\secure\auth.json'
+    set GOOGLE_APPLICATION_CREDENTIALS=C:\secure\auth.json'
 ```
 
 -    N.B. if you don't do this, then just make sure the file is at the above mentioned location and the program will set this for you.
@@ -18,4 +18,4 @@
 ```
 
 ### TODO
-Bundle as exe
+Bundle as an executable
