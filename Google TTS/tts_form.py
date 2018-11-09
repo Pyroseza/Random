@@ -10,11 +10,11 @@ import PySimpleGUI as sg
 import babel
 
 class google_tts():
-    def __init__(self):
+    def __init__(self, debug=False):
         # set OS ENV var for the Google authentication token
         if os.environ.get('GOOGLE_APPLICATION_CREDENTIALS') is None:
             os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = r'C:\secure\auth.json'
-        self.debug = True
+        self.debug = debug
         self.selected_options = {}
         self.selected_options['language_locale'] = ''
         self.selected_options['voice_type'] = ''
@@ -23,13 +23,14 @@ class google_tts():
                             'available in multiple languages and variants. It applies DeepMind’s groundbreaking research in WaveNet and ' + \
                             'Google’s powerful neural networks to deliver the highest fidelity possible. As an easy-to-use API, ' + \
                             'you can create lifelike interactions with your users, across many applications and devices.'
+        self.default_output = os.path.join(os.getcwd(),'output.mp3')
 
     def debug_print(self, *args):
         if self.debug:
             try:
                 print(''.join(args), flush=True)
             except:
-                print(args, flush=True)
+                pass
 
     def synthesize(self, values):
         locale_code = self.convert_lang_to_locale(values['language_locale'])
@@ -65,37 +66,40 @@ class google_tts():
         # The response's audio_content is binary.
         with open(values['output'], 'wb') as out:
             out.write(response.audio_content)
-            sg.PopupAutoClose('Audio content written to file "{}"'.format(values['output']), no_titlebar=True, 
-                                auto_close_duration=3, button_type=sg.POPUP_BUTTONS_NO_BUTTONS)
+            sg.PopupQuick('Audio content written to file "{}"'.format(values['output']), no_titlebar=True, button_type=sg.POPUP_BUTTONS_NO_BUTTONS)
 
     def set_form_layout(self):
         self.layout = [
-            [sg.Text('Google Cloud Text-to-Speech', size=(35, 1), justification='center', font=('Helvetica', 25), relief=sg.RELIEF_RIDGE)],
+            [sg.Text('Google Cloud Text-to-Speech', size=(38, 1), justification='center', font=('Helvetica', 25), relief=sg.RELIEF_RIDGE)],
             [sg.Frame(layout=[
                 [sg.Radio('text', 'input_type', key='input_type_text', default=True),
                 sg.Radio('ssml', 'input_type', key='input_type_ssml')]
             ], title='Input type', tooltip='Choose input type'),
-            sg.Text(' '  * 100),
-            sg.RButton('Google API', key='API', size=(12,2))],
+            sg.Text(' '  * 110),
+            sg.Button('Google API', key='API', size=(12,2))],
             [sg.Multiline(default_text=self.default_text, key='input', size=(100, 15), do_not_clear=True),
             ],
-            [sg.Text('Language / locale', size=(27, 1)),
-                sg.Text('Voice type', size=(27, 1)),
-                sg.Text('Voice option / gender', size=(27, 1))],
-            [sg.InputCombo(self.languages, key='language_locale',size=(27, 1),change_submits=True, readonly=True),
-                sg.InputCombo(['--choose locale--'], key='voice_type', size=(27, 1), change_submits=True, readonly=True),
-                sg.InputCombo(['--choose voice type--'], key='voice_option', size=(27, 1), readonly=True)],
-            [sg.Frame(layout=[[sg.Slider(range=(25, 400), key='speed', orientation='h', size=(25, 20), default_value=100)]], title='Speed'),
-                sg.Frame(layout=[[sg.Slider(range=(-20, 20), key='pitch', orientation='h', size=(25, 20), default_value=0)]], title='Pitch')],
-            [sg.Text('_'  * 95)],
-            [sg.Text('Choose a filename to save output as:', size=(35, 1))],
-            [sg.InputText(os.path.join(os.getcwd(),'output.mp3'), key='output',size=(90, 1), do_not_clear=True), 
+            [sg.Text('Language / locale', size=(25, 1)),
+                sg.Text(' '  * 17),
+                sg.Text('Voice type', size=(15, 1)),
+                sg.Text(' '  * 20),
+                sg.Text('Voice option / gender', size=(18, 1))],
+            [sg.InputCombo(self.languages, key='language_locale',size=(25, 1),change_submits=True, readonly=True),
+                sg.Text(' '  * 20),
+                sg.InputCombo(['--choose locale--'], key='voice_type', size=(15, 1), change_submits=True, readonly=True),
+                sg.Text(' '  * 20),
+                sg.InputCombo(['--choose voice type--'], key='voice_option', size=(15, 1), readonly=True)],
+            [sg.Frame(layout=[[sg.Slider(range=(25, 400), key='speed', orientation='h', size=(29, 20), default_value=100)]], title='Speed'),
+                sg.Frame(layout=[[sg.Slider(range=(-20, 20), key='pitch', orientation='h', size=(29, 20), default_value=0)]], title='Pitch')],
+            [sg.Text('_'  * 102)],
+            [sg.Text('Choose a location and filename to save the output mp3 as:', size=(50, 1))],
+            [sg.InputText(self.default_output, key='output',size=(91, 1), do_not_clear=True),
             sg.FileSaveAs(target='output', file_types=(('MP3 Files', '*.mp3'),))],
-            [sg.RButton('Synthesize', tooltip='Click to synthesize', size=(18,2)),
-            sg.RButton('Play', tooltip='Click to play', size=(18,2)),
-            sg.RButton('Open', tooltip='Click to open output location', size=(18,2)),
+            [sg.Button('Synthesize', tooltip='Click to synthesize', size=(18,2)),
+            sg.Button('Play', tooltip='Click to play', size=(18,2)),
+            sg.Button('Open', tooltip='Click to open output location', size=(18,2)),
             sg.Text(' '  * 10),
-            sg.RButton('Reset', tooltip='Click to reset values', size=(10,2)), 
+            sg.Button('Reset', tooltip='Click to reset values', size=(10,2)),
             sg.Exit(size=(10, 2))]
         ]
 
@@ -104,7 +108,7 @@ class google_tts():
         self.locales = {}
         # list to only keep track of unique languages for the form
         self.languages = []
-        # create a tree of the languages and the options used for the GUI, 
+        # create a tree of the languages and the options used for the GUI,
         # i.e. list of keys (locales) that links to a list of available voice types, genders and multiple options for that voice type
         self.voice_list = []
         # API call to get full list of supported voices
@@ -118,11 +122,6 @@ class google_tts():
             voice_formatted = '{}-{}'.format(voice.name, texttospeech.enums.SsmlVoiceGender(voice.ssml_gender).name)
             self.debug_print(voice_formatted)
             self.voice_list.append(voice_formatted)
-            # update the default text to the correct amount of voices
-            self.default_text = 'Google Cloud Text-to-Speech enables developers to synthesize natural-sounding speech with {} voices, '.format(len(self.voice_list)) + \
-                    'available in multiple languages and variants. It applies DeepMind’s groundbreaking research in WaveNet and ' + \
-                    'Google’s powerful neural networks to deliver the highest fidelity possible. As an easy-to-use API, ' + \
-                    'you can create lifelike interactions with your users, across many applications and devices.'
             # languages is a list but only 1 item that I can see
             language_code = voice.language_codes[0]
             # convert language code to babel friendly code. Example: 'en-GB' => 'en_GB'
@@ -136,6 +135,11 @@ class google_tts():
                 # add it to languages as well, used in the GUI
                 if self.locales[language_code] not in self.languages:
                     self.languages.append(self.locales[language_code])
+            # update the default text to the correct amount of voices
+        self.default_text = 'Google Cloud Text-to-Speech enables developers to synthesize natural-sounding speech with {} voices, '.format(len(self.voice_list)) + \
+                'available in multiple languages and variants. It applies DeepMind’s groundbreaking research in WaveNet and ' + \
+                'Google’s powerful neural networks to deliver the highest fidelity possible. As an easy-to-use API, ' + \
+                'you can create lifelike interactions with your users, across many applications and devices.'
         # sort language list
         self.languages.sort()
 
@@ -189,6 +193,10 @@ class google_tts():
 
     def set_defaults_options_on_form(self, window):
         if self.set_defaults == True:
+            # set the input text type and
+            window.FindElement('input').Update(value=self.default_text)
+            # set the input back to text
+            window.FindElement('input_type_text').Update(value=True)
             # set selected language / locale to British English
             self.selected_options['language_locale'] = 'English (United Kingdom)'
             # select the item in the dropdown to the chosen language
@@ -201,7 +209,7 @@ class google_tts():
             # set the selected voice type to the Wavenet type
             self.selected_options['voice_type'] = 'Wavenet'
             # select the item in the dropdown to the chosen voice type
-            window.FindElement('voice_type').Update(set_to_index=voice_types.index(self.selected_options['voice_type']))                    
+            window.FindElement('voice_type').Update(set_to_index=voice_types.index(self.selected_options['voice_type']))
             # retrieve the voice options for the chose language / locale and the chosen voice type
             voice_options = self.get_voice_options()
             voice_options.sort()
@@ -210,10 +218,13 @@ class google_tts():
             # set the selected voice option to the first Male option
             self.selected_options['voice_option'] = 'B-MALE'
             # select the item in the dropdown to the chosen voice option
-            window.FindElement('voice_option').Update(set_to_index=voice_options.index(self.selected_options['voice_option']))  
-            # set the 
+            window.FindElement('voice_option').Update(set_to_index=voice_options.index(self.selected_options['voice_option']))
+            # set the speed slider
             window.FindElement('speed').Update(value=100)
+            # set the pitch slider
             window.FindElement('pitch').Update(value=0)
+            # set the output location
+            window.FindElement('output').Update(self.default_output)
             self.set_defaults = False
 
     def main(self):
@@ -229,7 +240,7 @@ class google_tts():
            text_color=colours[3],
            button_color=('white', colours[1]))
         # inform the user that the data is being retrieved from Google
-        sg.PopupAutoClose('Retrieving data from Google', no_titlebar=True, auto_close_duration=2, button_type=sg.POPUP_BUTTONS_NO_BUTTONS)
+        sg.PopupQuick('Retrieving data from Google', no_titlebar=True, button_type=sg.POPUP_BUTTONS_NO_BUTTONS)
         # make the Google API call to create the client
         self.client = texttospeech.TextToSpeechClient()
         # retrieve and unpack the data from the client
@@ -241,7 +252,7 @@ class google_tts():
         try:
             # enter an indefinte loop to keep the form open and the user can interact with it, we can then check the button presses
             while True:
-                event, values = window.Read(timeout=100)                
+                event, values = window.Read(timeout=100)
                 self.set_defaults_options_on_form(window)
                 # check which button was clicked
                 if event == 'Exit':
@@ -272,7 +283,7 @@ class google_tts():
                         self.debug_print(full_path, full_path.split(os.path.sep), full_path.split(os.path.sep)[-1], file_index, full_path[:file_index])
                         webbrowser.open(full_path[:file_index])
                     except:
-                        sg.Popup('Unable to open the output location: "{}"'.format(values['output']))                        
+                        sg.Popup('Unable to open the output location: "{}"'.format(values['output']))
                 elif event == 'Play':
                     try:
                         webbrowser.open(values['output'])
@@ -289,6 +300,8 @@ class google_tts():
                     if values['output'].endswith('.mp3') == False:
                         output_file = values['output'] + '.mp3'
                         update = True
+                    # in Windows for some reason the file path is return with forward slashes,
+                    # rather just use the correct OS path separator, if *nix based it will stay forward slash
                     if '/' in values['output']:
                         output_file = values['output'].replace('/', os.path.sep)
                         update = True
