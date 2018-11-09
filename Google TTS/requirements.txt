@@ -1,0 +1,4 @@
+google-cloud-texttospeech==0.2.0
+PySimpleGUI==3.13.0
+babel==2.6.0
+playsound==1.2.2
