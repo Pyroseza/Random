@@ -316,7 +316,7 @@ class google_tts():
             sg.PopupError('Unexpected error occurred: "{}"'.format(e), no_titlebar=True)
             traceback.print_exc(file=sys.stdout)
         finally:
-            window.CloseNonBlocking()
+            window.Close()
 
 if __name__=='__main__':
     # create instance of the google tts form
