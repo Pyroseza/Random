@@ -286,7 +286,10 @@ class google_tts():
                         sg.Popup('Unable to open the output location: "{}"'.format(values['output']))
                 elif event == 'Play':
                     try:
-                        webbrowser.open(values['output'])
+                        if os.path.exists(values['output']):
+                            webbrowser.open(values['output'])
+                        else:
+                            sg.Popup('You need to first create the file at location: \n"{}"'.format(values['output']))
                     except Exception as e:
                         sg.Popup('An error occurred trying to play the file at location: "{}"\n{}'.format(values['output'], e))
                 elif event == 'Synthesize':
