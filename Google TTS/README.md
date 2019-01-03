@@ -8,15 +8,15 @@
 ```
 - **N.B. if you don't do this, then just make sure the file is at the above mentioned location and the program will set this for you.**
 4. You should now be ready to just run the application.
->There are 2 methods you can follow:
->- I have created a batch file called "Text-to-speech.bat" which you can double click and launch.
+There are 2 methods you can follow:
+- I have created a batch file called "Text-to-speech.bat" which you can double click and launch.
 
->>Alternatively...
+Alternatively...
 
->- You can go into the directory where the script is and perform the following steps:
->>1. hold shift and right-click in the open space
->>2. choose the item "Open command window here"
->>3. type in the following command and hit enter:
+- You can go into the directory where the script is and perform the following steps:
+1. hold shift and right-click in the open space
+2. choose the item "Open command window here"
+3. type in the following command and hit enter:
 ```
             python tts_google.py
 ```
