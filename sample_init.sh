@@ -1,4 +1,7 @@
-#!/bin/bash
+#!/usr/bin/env bash
+# this script is used to automatically start the unicorn hat binary clock script located here:
+# https://github.com/pimoroni/unicorn-hat/blob/master/examples/binary_clock.py
+
 case $1 in
   start)
     sudo /home/pi/unicorn-hat/examples/binary_clock.py 1>/dev/null 2>&1 &
