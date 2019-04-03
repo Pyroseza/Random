@@ -22,8 +22,8 @@ python tts_google.py
 ```
 - **N.B. Running the script the first time will install the dependencies required to run the application, this will need access to the internet, if you do not have internet access the entire application will fail to execute.**
 ### TODO
-<<<<<<< HEAD
+
 - Bundle as an executable
 =======
 Bundle as an executable, requires alternative software
->>>>>>> 1869884ea52679a8f7d811a4ecd5d7ca6490e403
+

@@ -11,7 +11,7 @@ except Exception as e:
     # something is wrong with the imports try installing them
     import os
     # set the proxy
-    os.environ['HTTPS_PROXY'] = r'http://ep.threatpulse.net:80'
+    #os.environ['HTTPS_PROXY'] = r'http://ep.threatpulse.net:80'
     # install from the requirements.txt file
     os.system('pip install -U -r requirements.txt')
 
@@ -38,12 +38,9 @@ from google.cloud import texttospeech
 import PySimpleGUI as sg
 import babel
 
-<<<<<<< HEAD
-=======
 # this is the main class for the project it contains both GUI code and API calls.
 # it uses the PySimpleGUI module for GUI code which is already a wrapper class to speed up GUI dev
 # and it makes calls to the Google Cloud API to fetch a list of voices that which can be used to synthesize text
->>>>>>> 1869884ea52679a8f7d811a4ecd5d7ca6490e403
 
 class google_tts():
     def __init__(self, debug=False):
@@ -51,7 +48,7 @@ class google_tts():
         if os.environ.get('GOOGLE_APPLICATION_CREDENTIALS') is None:
             os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = r'C:\secure\auth.json'
         # set the proxy
-        os.environ['HTTPS_PROXY'] = r'http://ep.threatpulse.net:80'
+        #os.environ['HTTPS_PROXY'] = r'http://ep.threatpulse.net:80'
         self.debug = debug
         self.selected_options = {}
         self.selected_options['language_locale'] = ''
