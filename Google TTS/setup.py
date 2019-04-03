@@ -1,7 +1,7 @@
 #!/bin/env python
 import os
 # set the proxy
-os.environ['HTTPS_PROXY'] = r'http://ep.threatpulse.net:80'
+#os.environ['HTTPS_PROXY'] = r'http://ep.threatpulse.net:80'
 # install from the requirements.txt file
 os.system('pip install -U -r requirements.txt')
 # check if it is installed by importing the modules

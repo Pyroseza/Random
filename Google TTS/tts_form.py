@@ -9,6 +9,7 @@ from google.cloud import texttospeech
 import PySimpleGUI as sg
 import babel
 
+
 class google_tts():
     def __init__(self, debug=False):
         # set OS ENV var for the Google authentication token
@@ -125,13 +126,19 @@ class google_tts():
             # languages is a list but only 1 item that I can see
             language_code = voice.language_codes[0]
             # convert language code to babel friendly code. Example: 'en-GB' => 'en_GB'
-            babel_locale_code = babel.Locale.parse(language_code.replace('-','_'))
+            nice_name = ""
+            try:
+                babel_locale_code = babel.Locale.parse(language_code.replace('-','_'))
+                nice_name = babel_locale_code.get_display_name('en')
+            except:
+                nice_name = language_code
             # check if it exists in the dict or else add it in its original form e.g. en-GB
             if language_code not in self.locales:
                 # store the key as its original form not babels form
                 # grab language code and convert to a display friendly language name
                 # store this as the value, example: 'en-GB' -> 'English (United Kingdom)'
-                self.locales[language_code] = babel_locale_code.get_display_name('en')
+                self.locales[language_code] = nice_name
+                self.locales[language_code] = nice_name
                 # add it to languages as well, used in the GUI
                 if self.locales[language_code] not in self.languages:
                     self.languages.append(self.locales[language_code])
@@ -321,8 +328,9 @@ class google_tts():
         finally:
             window.Close()
 
-if __name__=='__main__':
+
+if __name__ == '__main__':
     # create instance of the google tts form
-    tts_google = google_tts()
+    tts_google = google_tts(debug=True)
     # call it's main function
     tts_google.main()

@@ -18,4 +18,4 @@
 ```
 
 ### TODO
-Bundle as an executable
+- Bundle as an executable
