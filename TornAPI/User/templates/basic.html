@@ -1,0 +1,9 @@
+<h1>{{title}}</h1>
+
+<table border="10">
+    {% for key, value in user_data.items %}
+    <tr>
+        <td><b>{{ key }}</b></td><td>{{ value }}</td>
+    <tr>
+    {% endfor %}
+</table>
