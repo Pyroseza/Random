@@ -1,6 +1,6 @@
 #!/bin/env python
 
-# try importing the modules that do not come with Python by default 
+# try importing the modules that do not come with Python by default
 # check if it is installed by importing the modules
 try:
     from google.cloud import texttospeech
@@ -26,7 +26,7 @@ except Exception as e:
     import sys
     sys.exit(1)
 
-    
+
 # if it got here then everything seems fine
 import os
 import random
