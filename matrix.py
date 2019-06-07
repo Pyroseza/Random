@@ -10,9 +10,9 @@ for i in range(width):
     line.append(r.choice(symbols))
 
 while 1:
-    # if counter % 5 == 0:
-    #     for i in [r.randint(0, width-1) for x in range(10)]:
-    #         line[i] = r.choice(symbols)
+    if counter % 5 == 0:
+        for i in [r.randint(0, width-1) for x in range(10)]:
+            line[i] = r.choice(symbols)
 
     meh = ''.join([r.choice(symbols) for x in range(width)])
 
