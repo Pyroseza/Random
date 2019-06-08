@@ -116,7 +116,6 @@
 |eminem                             |    X    |    X    |
 |emperor                            |         |    X    |
 |enfold darkness                    |         |    X    |
-|ennslaved                          |         |    X    |
 |entombed A.D                       |         |    X    |
 |enslaved                           |         |    X    |
 |epica                              |    X    |    X    |
