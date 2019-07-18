@@ -149,6 +149,7 @@
 |genesis                            |         |    X    |
 |ghost                              |         |    X    |
 |ghost of a fallen age              |         |    X    |
+|gloryhammer                        |    X    |         |
 |goatwhore                          |    X    |         |
 |godsmack                           |         |    X    |
 |gojira                             |         |    X    |
