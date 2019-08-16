@@ -7,7 +7,7 @@ def random_pwd(size):
         [*ascii_uppercase],
         [*digits],
         #[*punctuation]
-        [*"!#$%&()*+,-.:;<=>?@[]^_{|}~"]
+        [*"!#$%&()*+-:;<=>?@[]^_{|}~"]
     ]
     if size<len(es):
         m = '7085677532797070327765846933'
