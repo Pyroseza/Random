@@ -198,7 +198,7 @@ class google_tts():
         locale_code = ''
         voice_types = []
         self.selected_options['language_locale'] = self.convert_lang_to_locale(language_code)
-        if self.selected_options['language_locale'] is not '':
+        if self.selected_options['language_locale'] != '':
             # we have a locale code
             # now get get a list of voice types
             for voice in self.voice_list:
@@ -215,7 +215,7 @@ class google_tts():
         return voice_types
 
     def get_voice_options(self, voice_type=''):
-        if voice_type is '':
+        if voice_type == '':
             voice_type = self.selected_options['voice_type']
         else:
             self.selected_options['voice_type'] = voice_type
